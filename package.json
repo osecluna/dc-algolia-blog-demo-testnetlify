@@ -1,0 +1,68 @@
+{
+  "name": "dc-algolia-blog-demo",
+  "version": "1.0.0-develop",
+  "description": "DC & Algolia driven blog",
+  "main": "index.js",
+  "scripts": {
+    "commit": "npx git-cz",
+    "test": "run-s lint",
+    "lint": "prettier --check \"**/*.js\" && eslint \"**/*.js\"",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"**/*.js\" --write",
+    "fix:eslint": "eslint --fix \"**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/amplience/dc-algolia-blog-demo.git"
+  },
+  "keywords": [
+    "dc",
+    "algolia",
+    "blog",
+    "demo"
+  ],
+  "author": "Amplience Ltd.",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/amplience/dc-algolia-blog-demo#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [
+        2,
+        "always",
+        100
+      ],
+      "type-case": [
+        1,
+        "always",
+        "lower-case"
+      ],
+      "subject-case": [
+        1,
+        "always",
+        "lower-case"
+      ]
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^7.6.0",
+    "@commitlint/config-conventional": "^7.6.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.17.0"
+  }
+}
