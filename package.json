@@ -66,8 +66,11 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
+    "dayjs": "^1.8.14",
+    "element-ui": "2.7.2",
     "nuxt": "^2.4.0",
-    "ts-node": "^8.1.0"
+    "ts-node": "^8.1.0",
+    "vue-property-decorator": "^8.1.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.6.0",
@@ -75,6 +78,7 @@
     "@nuxt/typescript": "^2.7.1",
     "@nuxtjs/eslint-config": "^0.0.1",
     "@types/jest": "^24.0.13",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",

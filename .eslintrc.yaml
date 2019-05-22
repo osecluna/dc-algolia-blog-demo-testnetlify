@@ -2,12 +2,12 @@ env:
   es6: true
   node: true
 extends:
-  - "eslint:recommended"
+  - "plugin:@typescript-eslint/recommended"
   - "@nuxtjs"
   - "plugin:nuxt/recommended"
-  - "plugin:prettier/recommended"
   - "prettier"
   - "prettier/vue"
+  - "prettier/@typescript-eslint"
 parserOptions:
   ecmaVersion: 2018
   parser: "babel-eslint"

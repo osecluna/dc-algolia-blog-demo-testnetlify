@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card is a Vue instance 1`] = `
+<div
+  class="el-card is-always-shadow"
+>
+  <!---->
+  <div
+    class="el-card__body"
+  >
+    <div>
+      <h2>
+        test-title
+      </h2>
+       
+      <p>
+        test-description
+      </p>
+       
+      <time
+        datetime="2011-11-18T14:54:39.929Z"
+      >
+        2011-11-18T14:54:39.929Z
+      </time>
+       
+      <a>
+        read
+      </a>
+    </div>
+  </div>
+</div>
+`;

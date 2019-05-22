@@ -24,12 +24,16 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    'element-ui/lib/theme-chalk/reset.css',
+    'element-ui/lib/theme-chalk/base.css',
+    'element-ui/lib/theme-chalk/card.css'
+  ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/plugins/element-ui', '@/plugins/filters'],
 
   /*
    ** Nuxt.js modules
