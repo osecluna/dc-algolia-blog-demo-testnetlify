@@ -2,8 +2,8 @@
   <section class="container">
     <div>
       <Logo />
-      <h1 class="title">{{ hits }}</h1>
-      <h2 class="subtitle">My very unexceptional Nuxt.js project</h2>
+      <h1 class="title">[ {{ texts.join(',') }} ]</h1>
+      <h2 class="subtitle">{{ error }}</h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
         <a href="https://github.com/nuxt/nuxt.js">GitHub</a>
@@ -22,28 +22,36 @@ export default {
   },
   data() {
     return {
-      message: 'hello Sean',
-      hits: []
+      message: 'Hello Sean',
+      hits: [],
+      texts: [],
+      error: null
     };
   },
-  beforeMount() {
-    const algoliaClient = algoliasearch('20V94JEJKD', 'f4ee136bf90522274a59aa306c6466b7');
+  created() {
+    const algoliaClient = algoliasearch('20V94JEJKD', 'f43d324e0306f1700051c2a5547922bf');
     const index = algoliaClient.initIndex('dev_staging_amplience');
+
+    index.setSettings({
+      attributesToRetrieve: 'objectId, text, dateTimeStamp, image',
+      ranking: ['desc(dateTimeStamp)', 'objectId', 'text', 'image']
+    });
     const browser = index.browseAll();
 
-    this.hits = [];
-
     browser.on('result', content => {
-      console.log('');
-      this.hits = this.hits.concat(content.hits);
+      this.hits = content.hits;
+      this.texts = this.texts.concat(content.hits.map(h => h.text));
+      console.log('this.texts=', this.texts);
     });
 
     browser.on('end', () => {
       console.log('Finished!');
       console.log('We got %d hits', this.hits.length);
+      console.log(this.hits);
     });
 
     browser.on('error', err => {
+      this.error = err;
       throw err;
     });
   }
