@@ -2,8 +2,8 @@
   <section class="container">
     <div>
       <Logo />
-      <h1 class="title">tmp-nuxt</h1>
-      <h2 class="subtitle">My exceptional Nuxt.js project</h2>
+      <h1 class="title">{{ hits }}</h1>
+      <h2 class="subtitle">My very unexceptional Nuxt.js project</h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
         <a href="https://github.com/nuxt/nuxt.js">GitHub</a>
@@ -14,10 +14,38 @@
 
 <script>
 import Logo from '@/components/Logo.vue';
+import * as algoliasearch from 'algoliasearch';
 
 export default {
   components: {
     Logo
+  },
+  data() {
+    return {
+      message: 'hello Sean',
+      hits: []
+    };
+  },
+  beforeMount() {
+    const algoliaClient = algoliasearch('20V94JEJKD', 'f4ee136bf90522274a59aa306c6466b7');
+    const index = algoliaClient.initIndex('dev_staging_amplience');
+    const browser = index.browseAll();
+
+    this.hits = [];
+
+    browser.on('result', content => {
+      console.log('');
+      this.hits = this.hits.concat(content.hits);
+    });
+
+    browser.on('end', () => {
+      console.log('Finished!');
+      console.log('We got %d hits', this.hits.length);
+    });
+
+    browser.on('error', err => {
+      throw err;
+    });
   }
 };
 </script>
