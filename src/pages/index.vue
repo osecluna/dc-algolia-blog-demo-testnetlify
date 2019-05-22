@@ -24,7 +24,7 @@ export default {
     return {
       message: 'Hello Sean',
       hits: [],
-      texts: [],
+      texts: ['Loading...'],
       error: null
     };
   },
@@ -33,15 +33,14 @@ export default {
     const index = algoliaClient.initIndex('dev_staging_amplience');
 
     index.setSettings({
-      attributesToRetrieve: 'objectId, text, dateTimeStamp, image',
-      ranking: ['desc(dateTimeStamp)', 'objectId', 'text', 'image']
+      attributesToRetrieve: ['objectId', 'text', 'dateTimeStamp', 'image'],
+      ranking: ['desc(dateTimeStamp)']
     });
     const browser = index.browseAll();
 
     browser.on('result', content => {
       this.hits = content.hits;
-      this.texts = this.texts.concat(content.hits.map(h => h.text));
-      console.log('this.texts=', this.texts);
+      this.texts = this.texts.concat(content.hits.map(h => (h.text ? h.text.text : '')));
     });
 
     browser.on('end', () => {
