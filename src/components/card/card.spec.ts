@@ -7,13 +7,14 @@ describe('Card', () => {
     const wrapper = shallowMount(Card, {
       stubs: { ElCard, NuxtLink: RouterLinkStub },
       filters: {
-        date: value => value
+        blogDate: value => value
       },
       propsData: {
         title: 'test-title',
         description: 'test-description',
         link: 'test-id',
-        timestamp: '2011-11-18T14:54:39.929Z'
+        timestamp: '2011-11-18T14:54:39.929Z',
+        image: 'test-image.jpg'
       }
     });
 

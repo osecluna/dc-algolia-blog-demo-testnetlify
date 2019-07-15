@@ -1,5 +1,5 @@
 import Vue from 'vue';
 
-import dateFilter from '@/filters/date.filter';
+import blogDateFilter from '@/filters/blog-date.filter';
 
-Vue.filter('date', dateFilter);
+Vue.filter('blogDate', blogDateFilter);

@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-export default (value: string, format = 'dddd D MMMM YYYY HH:mm:ss'): string => {
+export default (value: string, format = 'D MMMM YYYY'): string => {
   if (!value) {
     return '';
   }
