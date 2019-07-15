@@ -25,6 +25,7 @@ export default {
    ** Global CSS
    */
   css: [
+    '@/assets/styles/default.scss',
     'element-ui/lib/theme-chalk/reset.css',
     'element-ui/lib/theme-chalk/base.css',
     'element-ui/lib/theme-chalk/card.css',
