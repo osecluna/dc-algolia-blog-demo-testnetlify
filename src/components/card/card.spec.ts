@@ -3,7 +3,7 @@ import { Card as ElCard } from 'element-ui';
 import Card from './card.vue';
 
 describe('Card', () => {
-  test('is a Vue instance', () => {
+  test('is a Card instance with card data', () => {
     const wrapper = shallowMount(Card, {
       stubs: { ElCard, NuxtLink: RouterLinkStub },
       filters: {

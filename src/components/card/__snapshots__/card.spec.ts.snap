@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card is a Vue instance 1`] = `
+exports[`Card is a Card instance with card data 1`] = `
 <div
-  class="el-card is-always-shadow"
+  class="el-card is-hover-shadow"
 >
   <!---->
   <div

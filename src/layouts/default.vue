@@ -1,7 +1,12 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <el-container>
+    <el-header>
+      <h1>Static heading</h1>
+    </el-header>
+    <el-main>
+      <nuxt />
+    </el-main>
+  </el-container>
 </template>
 
 <style>
@@ -51,5 +56,14 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.el-header {
+  margin: auto;
+}
+
+.el-main {
+  margin: auto;
+  max-width: 800px;
 }
 </style>
