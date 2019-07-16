@@ -32,26 +32,18 @@ export default {
     const algoliaClient = algoliasearch('20V94JEJKD', 'f43d324e0306f1700051c2a5547922bf');
     const index = algoliaClient.initIndex('dev_staging_amplience');
 
+    this.texts = [];
+
     index.setSettings({
       attributesToRetrieve: ['objectId', 'text', 'dateTimeStamp', 'image'],
-      ranking: ['desc(dateTimeStamp)']
-    });
-    const browser = index.browseAll();
-
-    browser.on('result', content => {
-      this.hits = content.hits;
-      this.texts = this.texts.concat(content.hits.map(h => (h.text ? h.text.text : '')));
+      ranking: ['desc(dateTimeStamp)'],
+      hitsPerPage: 1
     });
 
-    browser.on('end', () => {
-      console.log('Finished!');
-      console.log('We got %d hits', this.hits.length);
-      console.log(this.hits);
-    });
-
-    browser.on('error', err => {
-      this.error = err;
-      throw err;
+    index.search('zappier', (err, { hits } = {}) => {
+      if (err) throw err;
+      console.log('hits = ', hits.length);
+      this.texts = this.texts.concat(hits.map(h => (h.text ? h.text.text : '')));
     });
   }
 };
