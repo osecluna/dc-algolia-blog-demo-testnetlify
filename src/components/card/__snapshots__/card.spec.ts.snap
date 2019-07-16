@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card is a Card instance with card data 1`] = `
+<div
+  class="el-card is-hover-shadow"
+>
+  <!---->
+  <div
+    class="el-card__body"
+    style="padding: 0px;"
+  >
+    <div>
+      <a>
+        <img
+          alt="test-title"
+          class="image"
+          src="test-image.jpg"
+        />
+         
+        <div
+          class="content"
+        >
+          <h2>
+            test-title
+          </h2>
+           
+          <time
+            class="date-time"
+            datetime="2011-11-18T14:54:39.929Z"
+          >
+            2011-11-18T14:54:39.929Z
+          </time>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
