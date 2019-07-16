@@ -37,12 +37,11 @@ export default {
     index.setSettings({
       attributesToRetrieve: ['objectId', 'text', 'dateTimeStamp', 'image'],
       ranking: ['desc(dateTimeStamp)'],
-      hitsPerPage: 1
+      hitsPerPage: 9
     });
 
-    index.search('zappier', (err, { hits } = {}) => {
+    index.search('', (err, { hits } = {}) => {
       if (err) throw err;
-      console.log('hits = ', hits.length);
       this.texts = this.texts.concat(hits.map(h => (h.text ? h.text.text : '')));
     });
   }
