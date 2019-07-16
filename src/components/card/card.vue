@@ -28,15 +28,26 @@ export default Card;
 </script>
 
 <style lang="scss">
+$titleLineHeight: 22px;
+$titleLinesToDisplay: 3;
+
+h2 {
+  height: $titleLineHeight * $titleLinesToDisplay;
+  max-height: $titleLineHeight * $titleLinesToDisplay;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .content {
   padding: 14px;
 }
 
 .image {
   display: block;
-  object-fit: cover;
-  width: 100%;
   height: 140px;
+  max-height: 140px;
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
 }
 .date-time {
   font-size: 13px;
