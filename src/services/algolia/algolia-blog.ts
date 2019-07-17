@@ -1,5 +1,14 @@
 import { Client, IndexSettings, Index, Response } from 'algoliasearch';
 
+interface BlogResponse {
+  hits: BlogItem[];
+  paging: {
+    number: number;
+    size: number;
+    totalElements: number;
+    totalPages: number;
+  };
+}
 interface BlogItem {
   text: string;
   objectId: string;
@@ -21,11 +30,12 @@ class AlgoliaBlog {
     this.index.setSettings(this.settings);
   }
 
-  public async listBlogPosts(): Promise<BlogItem[]> {
-    let blogItems: BlogItem[] = [];
+  public async listBlogPosts(page: number = 0): Promise<BlogResponse> {
+    let hits: BlogItem[] = [];
+    let paging;
     try {
-      const response: Response = await this.index.search({ query: '' });
-      blogItems = response.hits.map(
+      const response: Response = await this.index.search({ query: '', page });
+      hits = response.hits.map(
         (h): BlogItem => {
           return {
             text: h.text.text,
@@ -35,11 +45,17 @@ class AlgoliaBlog {
           };
         }
       );
+      paging = {
+        number: response.page,
+        size: response.hitsPerPage,
+        totalElements: response.nbHits,
+        totalPages: response.nbPages
+      };
     } catch (err) {
       // handle error
       console.log(err);
     }
-    return blogItems;
+    return { hits, paging };
   }
 }
 

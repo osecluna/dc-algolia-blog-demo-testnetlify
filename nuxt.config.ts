@@ -32,6 +32,7 @@ export default {
     'element-ui/lib/theme-chalk/row.css',
     'element-ui/lib/theme-chalk/col.css',
     'element-ui/lib/theme-chalk/main.css',
+    'element-ui/lib/theme-chalk/pagination.css',
     'element-ui/lib/theme-chalk/container.css',
     'element-ui/lib/theme-chalk/header.css'
   ],
