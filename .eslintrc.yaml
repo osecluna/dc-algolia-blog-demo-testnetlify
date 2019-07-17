@@ -8,10 +8,14 @@ extends:
   - "prettier"
   - "prettier/vue"
   - "prettier/@typescript-eslint"
+  - "@vue/typescript"
+  - "plugin:vue/essential"
+  - "eslint:recommended"
 parserOptions:
   ecmaVersion: 2018
-  parser: "babel-eslint"
+  parser: "@typescript-eslint/parser"
 plugins:
   - "prettier"
+  - "@typescript-eslint"
 rules:
   no-console: 0

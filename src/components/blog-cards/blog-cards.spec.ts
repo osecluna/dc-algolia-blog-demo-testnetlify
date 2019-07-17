@@ -1,6 +1,5 @@
 import { shallowMount, RouterLinkStub } from '@vue/test-utils';
 import { Col as ElCol, Row as ElRow } from 'element-ui';
-import Card from '../card/card.vue';
 import BlogCards from './blog-cards.vue';
 
 describe('BlogCards', () => {
