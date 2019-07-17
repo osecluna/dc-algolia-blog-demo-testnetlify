@@ -75,5 +75,11 @@ export default {
     }
   },
 
-  srcDir: './src/'
+  srcDir: './src/',
+
+  env: {
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
+    ALGOLIA_BLOG_INDEX: process.env.ALGOLIA_BLOG_INDEX
+  }
 };

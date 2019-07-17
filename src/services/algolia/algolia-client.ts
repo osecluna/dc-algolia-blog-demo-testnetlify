@@ -4,9 +4,8 @@ class AlgoliaClient {
   private appId: string;
   private apiKey: string;
   public constructor() {
-    // TODO: change these to env vars
-    this.appId = '20V94JEJKD';
-    this.apiKey = 'f43d324e0306f1700051c2a5547922bf';
+    this.appId = process.env.ALGOLIA_APP_ID || '';
+    this.apiKey = process.env.ALGOLIA_API_KEY || '';
   }
 
   public create(): Client {
