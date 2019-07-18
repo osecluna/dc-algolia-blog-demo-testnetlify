@@ -1,4 +1,7 @@
 import pkg from './package.json';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default {
   mode: 'universal',
