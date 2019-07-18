@@ -1,13 +1,13 @@
 <template>
   <div>
     <el-row :gutter="20">
-      <el-col v-for="article in blogArticles" :key="article.objectId" :span="8">
+      <el-col v-for="item in blogItems" :key="item.objectId" :span="8">
         <card
-          :title="article.text"
-          :description="article.text"
-          :link="`/blog/${article.objectId}`"
-          :timestamp="article.dateTimestamp"
-          :image="article.image"
+          :title="item.text"
+          :description="item.text"
+          :link="`/blog/${item.objectId}`"
+          :timestamp="item.dateTimestamp"
+          :image="item.image"
         />
       </el-col>
     </el-row>
@@ -24,7 +24,7 @@ import Card from '@/components/card/card.vue';
   }
 })
 class BlogCards extends Vue {
-  @Prop() blogArticles;
+  @Prop() blogItems;
 }
 
 export default BlogCards;

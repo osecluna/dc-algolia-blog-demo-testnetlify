@@ -1,19 +1,10 @@
 import { Client, IndexSettings, Index, Response } from 'algoliasearch';
+import { BlogItem } from '../../models/blog/blog-item';
+import { BlogPaging } from '../../models/blog/blog-paging';
 
 interface BlogResponse {
   hits: BlogItem[];
-  paging: {
-    number: number;
-    size: number;
-    totalElements: number;
-    totalPages: number;
-  };
-}
-interface BlogItem {
-  text: string;
-  objectId: string;
-  dateTimestamp: string;
-  image: string;
+  paging: BlogPaging;
 }
 
 class AlgoliaBlog {
@@ -37,11 +28,14 @@ class AlgoliaBlog {
       const response: Response = await this.index.search({ query: '', page });
       hits = response.hits.map(
         (h): BlogItem => {
+          const text = h.text ? h.text.text : '';
+          const imageEndpoint = h.image && h.image.image ? h.image.image.endpoint : '';
+          const imageName = h.image && h.image.image ? h.image.image.name : '';
           return {
-            text: h.text.text,
+            text: text,
             objectId: h.objectID,
             dateTimestamp: h.dateTimeStamp,
-            image: `//${h.image.image.endpoint}/${h.image.image.name}`
+            image: `//${imageEndpoint}/${imageName}`
           };
         }
       );

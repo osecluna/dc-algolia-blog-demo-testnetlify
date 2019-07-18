@@ -10,7 +10,7 @@ describe('BlogCards', () => {
         date: value => value
       },
       propsData: {
-        blogArticles: [
+        blogItems: [
           {
             title: 'test-title',
             description: 'test-description',
@@ -32,7 +32,7 @@ describe('BlogCards', () => {
         date: value => value
       },
       propsData: {
-        blogArticles: [
+        blogItems: [
           {
             title: 'test-title',
             description: 'test-description',

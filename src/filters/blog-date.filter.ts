@@ -3,5 +3,6 @@ export default (value: string, format = 'D MMMM YYYY'): string => {
   if (!value) {
     return '';
   }
-  return dayjs(value).format(format);
+  const timestampToFormat = Number(value) * 1000;
+  return dayjs(timestampToFormat).format(format);
 };
