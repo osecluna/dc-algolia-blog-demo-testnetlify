@@ -39,6 +39,6 @@ describe('/blogs/_id', (): void => {
 
     expect(DynamicContentRenderingService).toHaveBeenCalled();
     expect(mockGetRenderedContentItem).toBeCalledWith('blog-post-id', 'BLOG_POST_RENDERING_TEMPLATE');
-    expect(wrapper.find('#blog-content').html()).toMatchSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
