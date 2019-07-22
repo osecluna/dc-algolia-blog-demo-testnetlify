@@ -1,7 +1,7 @@
-import {ContentClient, ContentClientConfig, RenderedContentItem} from 'dc-delivery-sdk-js';
+import { ContentClient, ContentClientConfig, RenderedContentItem } from 'dc-delivery-sdk-js';
 
-const stagingVseDomain: string = process.env.STAGING_VSE_DOMAIN || "STAGING_VSE_DOMAIN";
-const accountId: string = process.env.DC_ACCOUNT_ID || "DC_ACCOUNT_ID";
+const stagingVseDomain: string = process.env.STAGING_VSE_DOMAIN || 'STAGING_VSE_DOMAIN';
+const accountId: string = process.env.DC_ACCOUNT_ID || 'DC_ACCOUNT_ID';
 
 export default class DynamicContentRenderingService {
   private client: ContentClient;

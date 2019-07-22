@@ -1,8 +1,8 @@
 import DynamicContentRenderingService from './dynamic-content-rendering.service';
-import {ContentClient} from "~/node_modules/dc-delivery-sdk-js";
+import { ContentClient } from '~/node_modules/dc-delivery-sdk-js';
 
 const mockRenderContentItem = jest.fn().mockImplementation(() => {
-  return { body: '<html></html>' }
+  return { body: '<html></html>' };
 });
 
 jest.mock('dc-delivery-sdk-js', () => {
@@ -10,24 +10,26 @@ jest.mock('dc-delivery-sdk-js', () => {
     ContentClient: jest.fn(() => {
       return {
         renderContentItem: mockRenderContentItem
-      }
+      };
     })
-  }
+  };
 });
 
 describe('DynamicContentRenderingService', () => {
-  afterAll((): void => {
-    jest.clearAllMocks();
-  });
+  afterAll(
+    (): void => {
+      jest.clearAllMocks();
+    }
+  );
 
   test('Loads a new client', (): void => {
     new DynamicContentRenderingService();
-    expect(ContentClient).toBeCalledWith({account: 'DC_ACCOUNT_ID'});
+    expect(ContentClient).toBeCalledWith({ account: 'DC_ACCOUNT_ID' });
   });
 
   test('Loads a new client with a preview domain', (): void => {
     new DynamicContentRenderingService(true);
-    expect(ContentClient).toBeCalledWith({account: 'DC_ACCOUNT_ID', stagingEnvironment: 'STAGING_VSE_DOMAIN'});
+    expect(ContentClient).toBeCalledWith({ account: 'DC_ACCOUNT_ID', stagingEnvironment: 'STAGING_VSE_DOMAIN' });
   });
 
   test('Returns some HTML from the renderContentItem fn', async (): Promise<void> => {
@@ -36,5 +38,5 @@ describe('DynamicContentRenderingService', () => {
 
     expect(mockRenderContentItem).toBeCalledWith('123', 'templateName');
     expect(res).toEqual({ body: '<html></html>' });
-  })
+  });
 });
