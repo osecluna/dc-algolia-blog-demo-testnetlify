@@ -1,6 +1,6 @@
 <template>
   <ais-instant-search-ssr>
-    <ais-search-box :class-names="{'ais-SearchBox': 'MySearchBox',}" />
+    <ais-search-box :class-names="{'ais-SearchBox': 'search',}" />
       <template>
         <ais-hits :transform-items="transformItems">
           <template slot-scope="{ items }">
@@ -76,8 +76,8 @@ export default {
   margin: 1em;
 }
 
-.MySearchBox {
-    width: 100%
+.search {
+    padding: 10px;
 }
 
 .el-col {

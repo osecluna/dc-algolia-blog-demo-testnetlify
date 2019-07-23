@@ -37,13 +37,14 @@ export default {
     'element-ui/lib/theme-chalk/main.css',
     'element-ui/lib/theme-chalk/pagination.css',
     'element-ui/lib/theme-chalk/container.css',
-    'element-ui/lib/theme-chalk/header.css'
+    'element-ui/lib/theme-chalk/header.css',
+    'instantsearch.css/themes/algolia.css'
   ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/element-ui', '@/plugins/filters'],
+  plugins: ['@/plugins/element-ui', '@/plugins/filters', '@/plugins/algolia-instantsearch'],
 
   /*
    ** Nuxt.js modules
