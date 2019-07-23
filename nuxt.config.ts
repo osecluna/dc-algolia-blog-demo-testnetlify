@@ -1,4 +1,7 @@
 import pkg from './package.json';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default {
   mode: 'universal',
@@ -24,12 +27,23 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    '@/assets/styles/default.scss',
+    'element-ui/lib/theme-chalk/reset.css',
+    'element-ui/lib/theme-chalk/base.css',
+    'element-ui/lib/theme-chalk/card.css',
+    'element-ui/lib/theme-chalk/row.css',
+    'element-ui/lib/theme-chalk/col.css',
+    'element-ui/lib/theme-chalk/main.css',
+    'element-ui/lib/theme-chalk/pagination.css',
+    'element-ui/lib/theme-chalk/container.css',
+    'element-ui/lib/theme-chalk/header.css'
+  ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['@/plugins/element-ui', '@/plugins/filters'],
 
   /*
    ** Nuxt.js modules
@@ -65,5 +79,11 @@ export default {
     }
   },
 
-  srcDir: './src/'
+  srcDir: './src/',
+
+  env: {
+    ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+    ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
+    ALGOLIA_BLOG_INDEX: process.env.ALGOLIA_BLOG_INDEX
+  }
 };

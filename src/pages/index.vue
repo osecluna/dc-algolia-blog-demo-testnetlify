@@ -1,56 +1,57 @@
 <template>
-  <section class="container">
-    <div>
-      <Logo />
-      <h1 class="title">tmp-nuxt</h1>
-      <h2 class="subtitle">My exceptional Nuxt.js project</h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js">GitHub</a>
-      </div>
-    </div>
+  <section class="blog-cards-container">
+    <blog-cards :blog-items="blogItems" />
+    <el-pagination
+      v-if="paging.totalPages"
+      layout="prev, pager, next"
+      :page-size="paging.size"
+      :total="paging.totalElements"
+      :page-count="paging.totalPages"
+      @current-change="handlePageChange"
+    ></el-pagination>
   </section>
 </template>
 
-<script>
-import Logo from '@/components/Logo.vue';
-
-export default {
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+import BlogCards from '@/components/blog-cards/blog-cards.vue';
+import { algoliaBlog } from '../services/algolia';
+import { BlogItem } from '../models/blog/blog-item';
+import { BlogPaging } from '../models/blog/blog-paging';
+@Component({
   components: {
-    Logo
+    BlogCards
   }
-};
+})
+class Index extends Vue {
+  private blogItems: BlogItem[] = [];
+  private paging: BlogPaging = {};
+  data() {
+    return {
+      blogItems: [],
+      paging: {}
+    };
+  }
+
+  mounted() {
+    this.getBlogItems();
+  }
+
+  handlePageChange(page) {
+    this.getBlogItems(page - 1);
+  }
+
+  async getBlogItems(page = 0) {
+    const response = await algoliaBlog.listBlogPosts(page);
+    this.blogItems = response.hits;
+    this.paging = response.paging;
+  }
+}
+export default Index;
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang="scss">
+.el-pagination {
   text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
 }
 </style>
