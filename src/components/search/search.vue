@@ -2,24 +2,23 @@
   <ais-instant-search-ssr>
     <ais-search-box />
     <ais-stats />
-    <template>
-      <ais-hits>
-        <template slot-scope="{ items }">
-          <el-row :gutter="20">
-            <el-col v-for="item in items" :key="item.objectId" :span="8">
-            <card
-              :title="item.text"
-              :description="item.text"
-              :link="`/blogs/${item.objectId}`"
-              :timestamp="item.dateTimestamp"
-              :image="item.image"
-            />
-          </el-col>
-      </el-row>
-        </template>
-      </ais-hits>
-    </template>
-
+      <template>
+        <ais-hits :transform-items="transformItems">
+          <template slot-scope="{ items }">
+            <el-row :gutter="20">
+              <el-col v-for="item in items" :key="item.objectId" :span="8">
+                <card
+                    :title="item.text"
+                    :description="item.text"
+                    :link="`/blogs/${item.objectId}`"
+                    :timestamp="item.dateTimestamp"
+                    :image="item.image"
+                />
+              </el-col>
+            </el-row>
+          </template>
+        </ais-hits>
+      </template>
     <ais-pagination />
   </ais-instant-search-ssr>
 </template>
@@ -64,10 +63,15 @@ export default {
   },
   methods: {
     /* eslint-disable */
-     transformItems: async (items) => {
-        return items;
-        //return response.hits;
-      }
+     transformItems: (items) => {
+        return items.map(item => ({
+          ...item,
+          text: item.text ? item.text.text : '',
+          objectId: item.objectID,
+          dateTimestamp: item.dateTimeStamp,
+          image: `//${item.image && item.image.image ? item.image.image.endpoint : ''}/${item.image && item.image.image ? item.image.image.name : ''}`
+        }))
+      },
     /* eslint-enable */
   },
   head() {
