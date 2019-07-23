@@ -1,8 +1,6 @@
 import { Client } from 'algoliasearch';
-import AlgoliaClient from './algolia-client';
-import AlgoliaBlog from './algolia-blog';
+import SearchClient from './search-client';
 
-const algoliaClient: Client = new AlgoliaClient().create();
-const algoliaBlog: AlgoliaBlog = new AlgoliaBlog(algoliaClient);
+const searchClient: Client = new SearchClient().create();
 
-export { algoliaBlog };
+export { searchClient };

@@ -1,7 +1,6 @@
 <template>
   <ais-instant-search-ssr>
-    <ais-search-box />
-    <ais-stats />
+    <ais-search-box :class-names="{'ais-SearchBox': 'MySearchBox',}" />
       <template>
         <ais-hits :transform-items="transformItems">
           <template slot-scope="{ items }">
@@ -23,27 +22,20 @@
   </ais-instant-search-ssr>
 </template>
 
-<script>
+<script lang="ts">
 import {
   AisInstantSearchSsr,
   AisHits,
   AisSearchBox,
-  AisStats,
   AisPagination,
   createInstantSearch
 } from 'vue-instantsearch';
-import algoliasearch from 'algoliasearch/lite';
 import Card from '@/components/card/card.vue';
-//import { algoliaBlog } from '../../services/algolia';
-
-const searchClient = algoliasearch(
-  '20V94JEJKD',
-  'f43d324e0306f1700051c2a5547922bf'
-);
+import { searchClient } from '../../services/algolia'
 
 const { rootMixin } = createInstantSearch({
   searchClient,
-  indexName: 'dev_staging_amplience',
+  indexName: process.env.ALGOLIA_BLOG_INDEX,
 });
 
 export default {
@@ -51,7 +43,6 @@ export default {
     AisInstantSearchSsr,
     AisHits,
     AisSearchBox,
-    AisStats,
     AisPagination,
     Card
   },
@@ -62,7 +53,6 @@ export default {
     };
   },
   methods: {
-    /* eslint-disable */
      transformItems: (items) => {
         return items.map(item => ({
           ...item,
@@ -72,19 +62,7 @@ export default {
           image: `//${item.image && item.image.image ? item.image.image.endpoint : ''}/${item.image && item.image.image ? item.image.image.name : ''}`
         }))
       },
-    /* eslint-enable */
-  },
-  head() {
-    return {
-      link: [
-        {
-          rel: 'stylesheet',
-          href:
-            'https://unpkg.com/instantsearch.css@7.1.0/themes/algolia-min.css',
-        },
-      ],
-    };
-  },
+  }
 };
 
 </script>
@@ -96,6 +74,10 @@ export default {
 }
 .ais-InstantSearch {
   margin: 1em;
+}
+
+.MySearchBox {
+    width: 100%
 }
 
 .el-col {

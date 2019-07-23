@@ -6,11 +6,9 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import BlogCards from '@/components/blog-cards/blog-cards.vue';
 import Search from '@/components/search/search.vue';
 @Component({
   components: {
-    BlogCards,
     Search
   }
 })
