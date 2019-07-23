@@ -23,20 +23,40 @@ describe('DynamicContentRenderingService', () => {
   );
 
   test('Loads a new client', (): void => {
-    new DynamicContentRenderingService();
-    expect(ContentClient).toBeCalledWith({ account: 'RENDERING_SERVICE_ACCOUNT_ID' });
+    const opts = {
+      account: 'RENDERING_SERVICE_ACCOUNT_ID'
+    };
+
+    new DynamicContentRenderingService(opts);
+    expect(ContentClient).toBeCalledWith(opts);
   });
 
   test('Loads a new client with a preview domain', (): void => {
-    new DynamicContentRenderingService(true);
-    expect(ContentClient).toBeCalledWith({
+    const opts = {
       account: 'RENDERING_SERVICE_ACCOUNT_ID',
-      stagingEnvironment: 'STAGING_VSE_DOMAIN'
-    });
+      stagingEnvironment: 'RENDERING_SERVICE_STAGING_DOMAIN'
+    };
+
+    new DynamicContentRenderingService(opts);
+    expect(ContentClient).toBeCalledWith(opts);
+  });
+
+  test('Loads a new client with a baseUrl', (): void => {
+    const opts = {
+      account: 'RENDERING_SERVICE_ACCOUNT_ID',
+      baseUrl: 'RENDERING_SERVICE_BASE_URL'
+    };
+
+    new DynamicContentRenderingService(opts);
+    expect(ContentClient).toBeCalledWith(opts);
   });
 
   test('Returns some HTML from the renderContentItem fn', async (): Promise<void> => {
-    const service = new DynamicContentRenderingService();
+    const opts = {
+      account: 'RENDERING_SERVICE_ACCOUNT_ID'
+    };
+
+    const service = new DynamicContentRenderingService(opts);
     const res = await service.getRenderedContentItem('123', 'templateName');
 
     expect(mockRenderContentItem).toBeCalledWith('123', 'templateName');

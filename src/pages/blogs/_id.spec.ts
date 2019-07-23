@@ -38,7 +38,7 @@ describe('/blogs/_id', (): void => {
     await flushPromises();
 
     expect(DynamicContentRenderingService).toHaveBeenCalled();
-    expect(mockGetRenderedContentItem).toBeCalledWith('blog-post-id', 'BLOG_POST_RENDERING_TEMPLATE');
+    expect(mockGetRenderedContentItem).toBeCalledWith('blog-post-id', '');
     expect(wrapper.html()).toMatchSnapshot();
   });
 });

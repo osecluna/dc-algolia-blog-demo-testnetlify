@@ -4,10 +4,13 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { RenderedContentItem } from '~/node_modules/dc-delivery-sdk-js';
+import { ContentClientConfig, RenderedContentItem } from '~/node_modules/dc-delivery-sdk-js';
 import DynamicContentRenderingService from '@/services/dynamic-content-rendering/dynamic-content-rendering.service';
 
-const renderingTemplate = process.env.BLOG_POST_RENDERING_TEMPLATE || 'BLOG_POST_RENDERING_TEMPLATE';
+const accountId: string = process.env.RENDERING_SERVICE_ACCOUNT_ID || '';
+const stagingVseDomain: string | undefined = process.env.RENDERING_SERVICE_STAGING_DOMAIN;
+const baseUrl: string | undefined = process.env.RENDERING_SERVICE_BASE_URL;
+const renderingTemplate: string = process.env.BLOG_POST_RENDERING_TEMPLATE || '';
 
 @Component({})
 export default class BlogPost extends Vue {
@@ -25,7 +28,19 @@ export default class BlogPost extends Vue {
 
   public async getContentItem(): Promise<void> {
     try {
-      const service = new DynamicContentRenderingService();
+      const renderingServiceConfig: ContentClientConfig = {
+        account: accountId
+      };
+
+      if (stagingVseDomain) {
+        renderingServiceConfig.stagingEnvironment = stagingVseDomain;
+      }
+
+      if (baseUrl) {
+        renderingServiceConfig.baseUrl = baseUrl;
+      }
+
+      const service = new DynamicContentRenderingService(renderingServiceConfig);
       this.contentItem = await service.getRenderedContentItem(this.$route.params.id, renderingTemplate);
     } catch (err) {
       // handle error
