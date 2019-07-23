@@ -1,10 +1,13 @@
 import { Client, IndexSettings, Index, Response } from 'algoliasearch';
 import { BlogItem } from '../../models/blog/blog-item';
 import { BlogPaging } from '../../models/blog/blog-paging';
-
 interface BlogResponse {
   hits: BlogItem[];
   paging: BlogPaging;
+}
+
+interface NewBlogResponse {
+  hits: BlogItem[];
 }
 
 class AlgoliaBlog {
@@ -50,6 +53,30 @@ class AlgoliaBlog {
       console.log(err);
     }
     return { hits, paging };
+  }
+
+  public async newListBlogPosts(items): Promise<NewBlogResponse> {
+    let hits: BlogItem[] = [];
+    try {
+
+      hits = items.map(
+        (h): BlogItem => {
+          const text = h.text ? h.text.text : '';
+          const imageEndpoint = h.image && h.image.image ? h.image.image.endpoint : '';
+          const imageName = h.image && h.image.image ? h.image.image.name : '';
+          return {
+            text: text,
+            objectId: h.objectID,
+            dateTimestamp: h.dateTimeStamp,
+            image: `//${imageEndpoint}/${imageName}`
+          };
+        }
+      );
+    } catch (err) {
+      // handle error
+      console.log(err);
+    }
+    return { hits };
   }
 }
 

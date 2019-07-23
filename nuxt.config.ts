@@ -60,6 +60,7 @@ export default {
    ** Build configuration
    */
   build: {
+    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
     /*
      ** You can extend webpack config here
      */

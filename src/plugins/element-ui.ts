@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { Card, Row, Col, Container, Header, Main, Pagination } from 'element-ui';
+import VueInstantSearch from 'vue-instantsearch';
 
 export default (): void => {
   Vue.use(Card);
@@ -9,4 +10,5 @@ export default (): void => {
   Vue.use(Header);
   Vue.use(Main);
   Vue.use(Pagination);
+  Vue.use(VueInstantSearch);
 };
