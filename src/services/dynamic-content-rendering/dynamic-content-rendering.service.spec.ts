@@ -29,7 +29,10 @@ describe('DynamicContentRenderingService', () => {
 
   test('Loads a new client with a preview domain', (): void => {
     new DynamicContentRenderingService(true);
-    expect(ContentClient).toBeCalledWith({ account: 'RENDERING_SERVICE_ACCOUNT_ID', stagingEnvironment: 'STAGING_VSE_DOMAIN' });
+    expect(ContentClient).toBeCalledWith({
+      account: 'RENDERING_SERVICE_ACCOUNT_ID',
+      stagingEnvironment: 'STAGING_VSE_DOMAIN'
+    });
   });
 
   test('Returns some HTML from the renderContentItem fn', async (): Promise<void> => {
