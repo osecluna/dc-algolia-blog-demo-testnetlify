@@ -49,3 +49,56 @@ export default class BlogPost extends Vue {
   }
 }
 </script>
+
+<style>
+.amp-dc-blog-content img {
+  width: 100%;
+}
+
+.amp-dc-blog-title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #606266;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.amp-dc-banner {
+  position: relative;
+}
+
+.amp-dc-banner .amp-dc-banner-info-wrap {
+  position: absolute;
+}
+
+.amp-dc-banner-info {
+  padding: 10px;
+}
+
+.amp-dc-banner-info .amp-dc-banner-header {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.amp-dc-banner-info .amp-dc-banner-subheader {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.amp-dc-banner-info .amp-dc-banner-description {
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.amp-dc-text {
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.amp-dc-text h3,
+h5 {
+  margin: 5px 0px;
+}
+</style>
