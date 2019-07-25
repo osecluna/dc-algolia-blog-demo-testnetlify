@@ -12,9 +12,7 @@ import Search from '@/components/search/search.vue';
     Search
   }
 })
-class Index extends Vue {
-
-}
+class Index extends Vue {}
 export default Index;
 </script>
 

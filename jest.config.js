@@ -7,8 +7,9 @@ module.exports = {
   moduleFileExtensions: ['js', 'ts', 'vue', 'json'],
   transform: {
     '^.+\\.ts$': 'ts-jest',
-    '.*\\.(vue)$': 'vue-jest'
+    '.*\\.(vue)$': 'vue-jest',
   },
-  collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/components/**/*.vue', '<rootDir>/pages/**/*.vue']
+  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  collectCoverageFrom: ['<rootDir>/components/**/*.vue', '<rootDir>/pages/**/*.vue'],
+  collectCoverage: true
 };

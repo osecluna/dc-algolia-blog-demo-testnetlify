@@ -23,22 +23,17 @@
 </template>
 
 <script lang="ts">
-import {
-  AisInstantSearchSsr,
-  AisHits,
-  AisSearchBox,
-  AisPagination,
-  createInstantSearch
-} from 'vue-instantsearch';
+import { AisInstantSearchSsr, AisHits, AisSearchBox, AisPagination, createInstantSearch } from 'vue-instantsearch';
 import Card from '@/components/card/card.vue';
-import { searchClient } from '../../services/algolia'
+import { Vue, Component}  from 'vue-property-decorator';
+import { searchClient } from '../../services/algolia';
 
 const { rootMixin } = createInstantSearch({
   searchClient,
-  indexName: process.env.ALGOLIA_BLOG_INDEX,
+  indexName: process.env.ALGOLIA_BLOG_INDEX
 });
 
-export default {
+@Component({
   components: {
     AisInstantSearchSsr,
     AisHits,
@@ -47,28 +42,28 @@ export default {
     Card
   },
   mixins: [rootMixin],
-  data() {
-    return {
-      blogItems: []
-    };
-  },
   methods: {
-     transformItems: (items) => {
-        return items.map(item => ({
-          ...item,
-          text: item.text ? item.text.text : '',
-          objectId: item.objectID,
-          dateTimestamp: item.dateTimeStamp,
-          image: `//${item.image && item.image.image ? item.image.image.endpoint : ''}/${item.image && item.image.image ? item.image.image.name : ''}`
-        }))
-      },
+    transformItems: items => {
+      return items.map(item => ({
+        ...item,
+        text: item.text ? item.text.text : '',
+        objectId: item.objectID,
+        dateTimestamp: item.dateTimeStamp,
+        image: `//${item.image && item.image.image ? item.image.image.endpoint : ''}/${
+                item.image && item.image.image ? item.image.image.name : ''
+                }`
+      }));
+    }
   }
-};
+})
 
+//
+class Search extends Vue {
+}
+export default Search;
 </script>
 
 <style lang="scss">
-
 .ais-Hits-list {
   text-align: left;
 }
@@ -77,7 +72,7 @@ export default {
 }
 
 .search {
-    padding: 10px;
+  padding: 10px;
 }
 
 .el-col {

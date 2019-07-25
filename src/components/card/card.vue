@@ -17,11 +17,16 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
 class Card extends Vue {
-  @Prop() title;
-  @Prop() description;
-  @Prop() link;
-  @Prop() timestamp;
-  @Prop() image;
+  @Prop()
+  title;
+  @Prop()
+  description;
+  @Prop()
+  link;
+  @Prop()
+  timestamp;
+  @Prop()
+  image;
 }
 
 export default Card;
