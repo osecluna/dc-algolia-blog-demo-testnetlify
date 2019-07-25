@@ -1,6 +1,6 @@
 <template>
   <section class="blog-cards-container">
-   <search />
+    <search />
   </section>
 </template>
 

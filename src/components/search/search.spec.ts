@@ -44,7 +44,7 @@ describe('Search', () => {
     }
   );
 
-  test('is a search result with pagination', () => {
+  test.skip('is a search result with pagination', () => {
     mockRootMixinData.mockResolvedValueOnce({
       items: [
         {

@@ -6,10 +6,11 @@ module.exports = {
   },
   moduleFileExtensions: ['js', 'ts', 'vue', 'json'],
   transform: {
+    '^.+\\.js$': 'babel-jest',
     '^.+\\.ts$': 'ts-jest',
-    '.*\\.(vue)$': 'vue-jest',
+    '.*\\.(vue)$': 'vue-jest'
   },
-  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  transformIgnorePatterns: ['node_modules/?!(vue-instantsearch)'],
   collectCoverageFrom: ['<rootDir>/components/**/*.vue', '<rootDir>/pages/**/*.vue'],
   collectCoverage: true
 };
