@@ -5,7 +5,7 @@
         <img class="image" :src="image" :alt="title" />
         <div class="content">
           <h2>{{ title }}</h2>
-          <time class="date-time" :datetime="timestamp">{{ timestamp | blogDate }}</time>
+          <time class="date-time" datetime="datetime-local">{{ this.displayDate(timestamp) }}</time>
         </div>
       </nuxt-link>
     </div>
@@ -27,6 +27,23 @@ class Card extends Vue {
   timestamp;
   @Prop()
   image;
+
+  public displayDate(ts: string): string {
+    const d = new Date(ts);
+    return (
+      d.getFullYear() +
+      '-' +
+      (d.getMonth() + 1) +
+      '-' +
+      d.getDate() +
+      ' ' +
+      d.getHours() +
+      ':' +
+      d.getMinutes() +
+      ':' +
+      d.getSeconds()
+    );
+  }
 }
 
 export default Card;

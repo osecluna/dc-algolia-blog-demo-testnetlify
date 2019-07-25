@@ -1,7 +1,9 @@
 import { shallowMount } from '@vue/test-utils';
 import Search from './search.vue';
 const mockRootMixinData = jest.fn();
-const mockSearchClient = jest.fn();
+const mockSearchClient = jest.fn(() => {
+  console.log('hey');
+});
 
 jest.mock('../../services/algolia/search-client', () => {
   return jest.fn(() => {
@@ -44,7 +46,7 @@ describe('Search', () => {
     }
   );
 
-  test.skip('is a search result with pagination', () => {
+  xtest('is a search result with pagination', () => {
     mockRootMixinData.mockResolvedValueOnce({
       items: [
         {
@@ -55,12 +57,13 @@ describe('Search', () => {
         }
       ]
     });
+
     const wrapper = shallowMount(Search);
+    expect(mockSearchClient).toBeCalled();
+    expect(mockRootMixinData).toBeCalledWith(mockSearchClient, 'dev_staging_amplience');
 
     expect(wrapper.isVueInstance()).toBeTruthy();
     expect(wrapper.element).toMatchSnapshot();
-    //expect(mockSearchClient).toBeCalled();
-    expect(mockRootMixinData).toBeCalledWith(mockSearchClient, 'dev_staging_amplience');
   });
 
   //   test('are search results with pagination', () => {

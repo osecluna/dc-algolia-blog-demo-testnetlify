@@ -10,4 +10,4 @@ class SearchClient {
   }
 }
 
-export default { SearchClient: new SearchClient().client }
+export default new SearchClient().client;

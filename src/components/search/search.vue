@@ -5,12 +5,12 @@
       <ais-hits :transform-items="transformItems">
         <template slot-scope="{ items }">
           <el-row :gutter="20">
-            <el-col v-for="item in items" :key="item.objectId" :span="8">
+            <el-col v-for="item in items" :key="item.objectID" :span="8">
               <card
-                :title="item.text"
+                :title="item.title"
                 :description="item.text"
-                :link="`/blogs/${item.objectId}`"
-                :timestamp="item.dateTimestamp"
+                :link="`/blogs/${item.objectID}`"
+                :timestamp="item.publishedDate"
                 :image="item.image"
               />
             </el-col>
@@ -23,13 +23,16 @@
 </template>
 
 <script lang="ts">
-import { AisInstantSearchSsr, AisHits, AisSearchBox, AisPagination, createInstantSearch } from 'vue-instantsearch';
+import { AisHits, AisInstantSearchSsr, AisPagination, AisSearchBox, createInstantSearch } from 'vue-instantsearch';
 import Card from '@/components/card/card.vue';
-import { Vue, Component } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import SearchClient from '../../services/algolia/search-client';
+import RawSearchResult from '@/components/search/interfaces/raw-search-result.interface';
+import SearchResult from '@/components/search/interfaces/search-result.interface';
+import SearchResultImagesService from '@/components/search/services/search-result-images.service';
 
 const { rootMixin } = createInstantSearch({
-  SearchClient,
+  searchClient: SearchClient,
   indexName: process.env.ALGOLIA_BLOG_INDEX
 });
 
@@ -43,29 +46,27 @@ const { rootMixin } = createInstantSearch({
   },
   mixins: [rootMixin],
   methods: {
-    transformItems: items => {
-      return items.map(item => ({
-        ...item,
-        text: item.text ? item.text.text : '',
-        objectId: item.objectID,
-        dateTimestamp: item.dateTimeStamp,
-        image: `//${item.image && item.image.image ? item.image.image.endpoint : ''}/${
-          item.image && item.image.image ? item.image.image.name : ''
-        }`
-      }));
+    transformItems: (items: RawSearchResult[]): SearchResult[] => {
+      return items.map(
+        (item: RawSearchResult): SearchResult => ({
+          objectID: item.objectID,
+          publishedDate: item.publishedDate,
+          title: item.title,
+          image: SearchResultImagesService.getImage(item),
+          roundel: SearchResultImagesService.getRoundel(item)
+        })
+      );
     }
   }
 })
-
-//
-class Search extends Vue {}
-export default Search;
+export default class Search extends Vue {}
 </script>
 
 <style lang="scss">
 .ais-Hits-list {
   text-align: left;
 }
+
 .ais-InstantSearch {
   margin: 1em;
 }
@@ -76,6 +77,7 @@ export default Search;
 
 .el-col {
   margin-bottom: 20px;
+
   &:last-child {
     margin-bottom: 0;
   }
