@@ -3,10 +3,10 @@ import Search from './search.vue';
 const mockRootMixinData = jest.fn();
 const mockSearchClient = jest.fn();
 
-jest.mock('../../services/algolia', () => {
+jest.mock('../../services/algolia/search-client', () => {
   return jest.fn(() => {
     return {
-      searchClient: mockSearchClient
+      SearchClient: mockSearchClient
     };
   });
 });
@@ -31,7 +31,7 @@ jest.mock('vue-instantsearch', () => {
               }
             };
           })()
-        }; // ouch...my brain
+        };
       })
     };
   })();

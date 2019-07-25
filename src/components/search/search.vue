@@ -26,10 +26,10 @@
 import { AisInstantSearchSsr, AisHits, AisSearchBox, AisPagination, createInstantSearch } from 'vue-instantsearch';
 import Card from '@/components/card/card.vue';
 import { Vue, Component } from 'vue-property-decorator';
-import { searchClient } from '../../services/algolia';
+import SearchClient from '../../services/algolia/search-client';
 
 const { rootMixin } = createInstantSearch({
-  searchClient,
+  SearchClient,
   indexName: process.env.ALGOLIA_BLOG_INDEX
 });
 
