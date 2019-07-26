@@ -19,9 +19,11 @@ jest.mock(
 );
 
 describe('Search', () => {
-  afterAll((): void => {
-    jest.restoreAllMocks();
-  });
+  afterAll(
+    (): void => {
+      jest.restoreAllMocks();
+    }
+  );
 
   test('is a search result with pagination', async () => {
     mockSearchFn.mockImplementationOnce(
@@ -38,30 +40,4 @@ describe('Search', () => {
     expect(wrapper.isVueInstance()).toBeTruthy();
     expect(wrapper.element).toMatchSnapshot();
   });
-
-  //   test('are search results with pagination', () => {
-  //     const wrapper = shallowMount(Search, {
-  //       stubs: { AisInstantSearchSsr, AisHits, AisSearchBox, AisPagination, NuxtLink: RouterLinkStub },
-
-  //       propsData: {
-  //         items: [
-  //           {
-  //             title: 'test-title',
-  //             description: 'test-description',
-  //             link: 'test-id',
-  //             timestamp: '2011-11-17T14:54:39.929Z'
-  //           },
-  //           {
-  //             title: 'test-title 2',
-  //             description: 'test-description 2',
-  //             link: 'test-id2',
-  //             timestamp: '2011-11-18T14:54:39.929Z'
-  //           }
-  //         ]
-  //       }
-  //     });
-
-  //     expect(wrapper.isVueInstance()).toBeTruthy();
-  //     expect(wrapper.element).toMatchSnapshot();
-  //   });
 });
