@@ -26,14 +26,16 @@
 import { AisHits, AisInstantSearchSsr, AisPagination, AisSearchBox, createInstantSearch } from 'vue-instantsearch';
 import Card from '@/components/card/card.vue';
 import { Component, Vue } from 'vue-property-decorator';
-import SearchClient from '../../services/algolia/search-client';
+import SearchClient from '@/services/algolia/search-client';
 import RawSearchResult from '@/components/search/interfaces/raw-search-result.interface';
 import SearchResult from '@/components/search/interfaces/search-result.interface';
 import SearchResultImagesService from '@/components/search/services/search-result-images.service';
 
+const indexName = process.env.ALGOLIA_BLOG_INDEX || '';
+
 const { rootMixin } = createInstantSearch({
-  searchClient: SearchClient,
-  indexName: process.env.ALGOLIA_BLOG_INDEX
+  searchClient: new SearchClient().client,
+  indexName
 });
 
 @Component({

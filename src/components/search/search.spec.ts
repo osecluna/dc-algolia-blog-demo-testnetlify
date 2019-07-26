@@ -1,66 +1,39 @@
-import { shallowMount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import Search from './search.vue';
-const mockRootMixinData = jest.fn();
-const mockSearchClient = jest.fn(() => {
-  console.log('hey');
-});
+import searchResponse from './fixtures/search-response.json';
+import flushPromises from 'flush-promises';
+import { MultiResponse, Response } from '~/node_modules/@types/algoliasearch';
 
-jest.mock('../../services/algolia/search-client', () => {
-  return jest.fn(() => {
-    return {
-      SearchClient: mockSearchClient
-    };
-  });
-});
+const mockSearchFn = jest.fn();
 
-jest.mock('vue-instantsearch', () => {
-  return jest.fn(() => {
-    return {
-      ...jest.requireActual('vue-instantsearch'),
-      createInstantSearch: jest.fn(() => {
-        return {
-          rootMixin: jest.fn(() => {
-            return {
-              data: () => {
-                return [
-                  {
-                    title: 'test-title',
-                    description: 'test-description',
-                    link: 'test-id',
-                    timestamp: '2011-11-18T14:54:39.929Z'
-                  }
-                ];
-              }
-            };
-          })()
-        };
-      })
-    };
-  })();
-});
+jest.mock(
+  '@/services/algolia/search-client',
+  () =>
+    function() {
+      return {
+        client: {
+          search: () => mockSearchFn.apply(null, arguments)
+        }
+      };
+    }
+);
 
 describe('Search', () => {
-  afterAll(
-    (): void => {
-      jest.restoreAllMocks();
-    }
-  );
+  afterAll((): void => {
+    jest.restoreAllMocks();
+  });
 
-  xtest('is a search result with pagination', () => {
-    mockRootMixinData.mockResolvedValueOnce({
-      items: [
-        {
-          title: 'test-title',
-          description: 'test-description',
-          link: 'test-id',
-          timestamp: '2011-11-18T14:54:39.929Z'
-        }
-      ]
-    });
+  test('is a search result with pagination', async () => {
+    mockSearchFn.mockImplementationOnce(
+      async (): Promise<MultiResponse<Response>> => {
+        return { results: [searchResponse] };
+      }
+    );
 
-    const wrapper = shallowMount(Search);
-    expect(mockSearchClient).toBeCalled();
-    expect(mockRootMixinData).toBeCalledWith(mockSearchClient, 'dev_staging_amplience');
+    const wrapper = mount(Search);
+    await flushPromises();
+
+    expect(mockSearchFn).toBeCalled();
 
     expect(wrapper.isVueInstance()).toBeTruthy();
     expect(wrapper.element).toMatchSnapshot();

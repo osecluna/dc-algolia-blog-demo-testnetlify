@@ -1,6 +1,6 @@
 import algoliasearch, { Client } from 'algoliasearch';
 
-class SearchClient {
+export default class SearchClient {
   public client: Client;
 
   public constructor() {
@@ -9,5 +9,3 @@ class SearchClient {
     this.client = algoliasearch(appId, apiKey);
   }
 }
-
-export default new SearchClient().client;
