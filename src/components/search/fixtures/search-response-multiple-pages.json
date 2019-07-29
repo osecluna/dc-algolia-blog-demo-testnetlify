@@ -1169,12 +1169,2742 @@
         "words": 0,
         "filters": 0
       }
+    },
+    {
+      "_meta": {
+        "name": "blog-post-today",
+        "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+      },
+      "snippet": {
+        "image": {
+          "image": {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            },
+            "id": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+            "name": "woman-purple-dress",
+            "endpoint": "devedition01",
+            "defaultHost": "i1-qa.adis.ws"
+          },
+          "roundel": [
+            {
+              "_meta": {
+                "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json"
+              },
+              "roundel": {
+                "_meta": {
+                  "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                },
+                "id": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                "name": "woman-tatoos",
+                "endpoint": "devedition01",
+                "defaultHost": "i1-qa.adis.ws"
+              },
+              "roundelRatio": 0.3
+            }
+          ],
+          "_meta": {
+            "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+          }
+        },
+        "title": "Blog Post",
+        "_meta": {
+          "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+        }
+      },
+      "content": [
+        {
+          "_meta": {
+            "name": "blog banner",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json"
+        },
+        {
+          "_meta": {
+            "name": "blog content",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "dff6238e-caf9-4822-baef-ae331e36fd52",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+        }
+      ],
+      "title": "Blog Post",
+      "publishedDate": "2019-07-24T08:21:31.323Z",
+      "objectID": "d79b4424-7fd4-4237-85e7-3df51c8716e4",
+      "_snippetResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none"
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none"
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none"
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none"
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none"
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none"
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none"
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none"
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none"
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none"
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none"
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none"
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none"
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none"
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none"
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none"
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none"
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none"
+        }
+      },
+      "_highlightResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none",
+                      "matchedWords": []
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      },
+      "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 0,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 0
+      }
+    },
+    {
+      "_meta": {
+        "name": "blog-post-today",
+        "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+      },
+      "snippet": {
+        "image": {
+          "image": {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            },
+            "id": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+            "name": "woman-purple-dress",
+            "endpoint": "devedition01",
+            "defaultHost": "i1-qa.adis.ws"
+          },
+          "roundel": [
+            {
+              "_meta": {
+                "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json"
+              },
+              "roundel": {
+                "_meta": {
+                  "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                },
+                "id": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                "name": "woman-tatoos",
+                "endpoint": "devedition01",
+                "defaultHost": "i1-qa.adis.ws"
+              },
+              "roundelRatio": 0.3
+            }
+          ],
+          "_meta": {
+            "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+          }
+        },
+        "title": "Blog Post",
+        "_meta": {
+          "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+        }
+      },
+      "content": [
+        {
+          "_meta": {
+            "name": "blog banner",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json"
+        },
+        {
+          "_meta": {
+            "name": "blog content",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "dff6238e-caf9-4822-baef-ae331e36fd52",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+        }
+      ],
+      "title": "Blog Post",
+      "publishedDate": "2019-07-24T08:21:31.323Z",
+      "objectID": "d79b4424-7fd4-4237-85e7-3df51c8716e4",
+      "_snippetResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none"
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none"
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none"
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none"
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none"
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none"
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none"
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none"
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none"
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none"
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none"
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none"
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none"
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none"
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none"
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none"
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none"
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none"
+        }
+      },
+      "_highlightResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none",
+                      "matchedWords": []
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      },
+      "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 0,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 0
+      }
+    },
+    {
+      "_meta": {
+        "name": "blog-post-today",
+        "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+      },
+      "snippet": {
+        "image": {
+          "image": {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            },
+            "id": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+            "name": "woman-purple-dress",
+            "endpoint": "devedition01",
+            "defaultHost": "i1-qa.adis.ws"
+          },
+          "roundel": [
+            {
+              "_meta": {
+                "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json"
+              },
+              "roundel": {
+                "_meta": {
+                  "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                },
+                "id": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                "name": "woman-tatoos",
+                "endpoint": "devedition01",
+                "defaultHost": "i1-qa.adis.ws"
+              },
+              "roundelRatio": 0.3
+            }
+          ],
+          "_meta": {
+            "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+          }
+        },
+        "title": "Blog Post",
+        "_meta": {
+          "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+        }
+      },
+      "content": [
+        {
+          "_meta": {
+            "name": "blog banner",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json"
+        },
+        {
+          "_meta": {
+            "name": "blog content",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "dff6238e-caf9-4822-baef-ae331e36fd52",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+        }
+      ],
+      "title": "Blog Post",
+      "publishedDate": "2019-07-24T08:21:31.323Z",
+      "objectID": "d79b4424-7fd4-4237-85e7-3df51c8716e4",
+      "_snippetResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none"
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none"
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none"
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none"
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none"
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none"
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none"
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none"
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none"
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none"
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none"
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none"
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none"
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none"
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none"
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none"
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none"
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none"
+        }
+      },
+      "_highlightResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none",
+                      "matchedWords": []
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      },
+      "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 0,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 0
+      }
+    },
+    {
+      "_meta": {
+        "name": "blog-post-today",
+        "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+      },
+      "snippet": {
+        "image": {
+          "image": {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            },
+            "id": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+            "name": "woman-purple-dress",
+            "endpoint": "devedition01",
+            "defaultHost": "i1-qa.adis.ws"
+          },
+          "roundel": [
+            {
+              "_meta": {
+                "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json"
+              },
+              "roundel": {
+                "_meta": {
+                  "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                },
+                "id": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                "name": "woman-tatoos",
+                "endpoint": "devedition01",
+                "defaultHost": "i1-qa.adis.ws"
+              },
+              "roundelRatio": 0.3
+            }
+          ],
+          "_meta": {
+            "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+          }
+        },
+        "title": "Blog Post",
+        "_meta": {
+          "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+        }
+      },
+      "content": [
+        {
+          "_meta": {
+            "name": "blog banner",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json"
+        },
+        {
+          "_meta": {
+            "name": "blog content",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "dff6238e-caf9-4822-baef-ae331e36fd52",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+        }
+      ],
+      "title": "Blog Post",
+      "publishedDate": "2019-07-24T08:21:31.323Z",
+      "objectID": "d79b4424-7fd4-4237-85e7-3df51c8716e4",
+      "_snippetResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none"
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none"
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none"
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none"
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none"
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none"
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none"
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none"
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none"
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none"
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none"
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none"
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none"
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none"
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none"
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none"
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none"
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none"
+        }
+      },
+      "_highlightResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none",
+                      "matchedWords": []
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      },
+      "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 0,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 0
+      }
+    },
+    {
+      "_meta": {
+        "name": "blog-post-today",
+        "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+      },
+      "snippet": {
+        "image": {
+          "image": {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            },
+            "id": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+            "name": "woman-purple-dress",
+            "endpoint": "devedition01",
+            "defaultHost": "i1-qa.adis.ws"
+          },
+          "roundel": [
+            {
+              "_meta": {
+                "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json"
+              },
+              "roundel": {
+                "_meta": {
+                  "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                },
+                "id": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                "name": "woman-tatoos",
+                "endpoint": "devedition01",
+                "defaultHost": "i1-qa.adis.ws"
+              },
+              "roundelRatio": 0.3
+            }
+          ],
+          "_meta": {
+            "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+          }
+        },
+        "title": "Blog Post",
+        "_meta": {
+          "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+        }
+      },
+      "content": [
+        {
+          "_meta": {
+            "name": "blog banner",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json"
+        },
+        {
+          "_meta": {
+            "name": "blog content",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "dff6238e-caf9-4822-baef-ae331e36fd52",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+        }
+      ],
+      "title": "Blog Post",
+      "publishedDate": "2019-07-24T08:21:31.323Z",
+      "objectID": "d79b4424-7fd4-4237-85e7-3df51c8716e4",
+      "_snippetResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none"
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none"
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none"
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none"
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none"
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none"
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none"
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none"
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none"
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none"
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none"
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none"
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none"
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none"
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none"
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none"
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none"
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none"
+        }
+      },
+      "_highlightResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none",
+                      "matchedWords": []
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      },
+      "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 0,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 0
+      }
+    },
+    {
+      "_meta": {
+        "name": "blog-post-today",
+        "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+      },
+      "snippet": {
+        "image": {
+          "image": {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            },
+            "id": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+            "name": "woman-purple-dress",
+            "endpoint": "devedition01",
+            "defaultHost": "i1-qa.adis.ws"
+          },
+          "roundel": [
+            {
+              "_meta": {
+                "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json"
+              },
+              "roundel": {
+                "_meta": {
+                  "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                },
+                "id": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                "name": "woman-tatoos",
+                "endpoint": "devedition01",
+                "defaultHost": "i1-qa.adis.ws"
+              },
+              "roundelRatio": 0.3
+            }
+          ],
+          "_meta": {
+            "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+          }
+        },
+        "title": "Blog Post",
+        "_meta": {
+          "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+        }
+      },
+      "content": [
+        {
+          "_meta": {
+            "name": "blog banner",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json"
+        },
+        {
+          "_meta": {
+            "name": "blog content",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "dff6238e-caf9-4822-baef-ae331e36fd52",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+        }
+      ],
+      "title": "Blog Post",
+      "publishedDate": "2019-07-24T08:21:31.323Z",
+      "objectID": "d79b4424-7fd4-4237-85e7-3df51c8716e4",
+      "_snippetResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none"
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none"
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none"
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none"
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none"
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none"
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none"
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none"
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none"
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none"
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none"
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none"
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none"
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none"
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none"
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none"
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none"
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none"
+        }
+      },
+      "_highlightResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none",
+                      "matchedWords": []
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      },
+      "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 0,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 0
+      }
+    },
+    {
+      "_meta": {
+        "name": "blog-post-today",
+        "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json"
+      },
+      "snippet": {
+        "image": {
+          "image": {
+            "_meta": {
+              "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+            },
+            "id": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+            "name": "woman-purple-dress",
+            "endpoint": "devedition01",
+            "defaultHost": "i1-qa.adis.ws"
+          },
+          "roundel": [
+            {
+              "_meta": {
+                "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json"
+              },
+              "roundel": {
+                "_meta": {
+                  "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                },
+                "id": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                "name": "woman-tatoos",
+                "endpoint": "devedition01",
+                "defaultHost": "i1-qa.adis.ws"
+              },
+              "roundelRatio": 0.3
+            }
+          ],
+          "_meta": {
+            "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
+          }
+        },
+        "title": "Blog Post",
+        "_meta": {
+          "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
+        }
+      },
+      "content": [
+        {
+          "_meta": {
+            "name": "blog banner",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json"
+        },
+        {
+          "_meta": {
+            "name": "blog content",
+            "schema": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          "id": "dff6238e-caf9-4822-baef-ae331e36fd52",
+          "contentType": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json"
+        }
+      ],
+      "title": "Blog Post",
+      "publishedDate": "2019-07-24T08:21:31.323Z",
+      "objectID": "d79b4424-7fd4-4237-85e7-3df51c8716e4",
+      "_snippetResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none"
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none"
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none"
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none"
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none"
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none"
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none"
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none"
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none"
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none"
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none"
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none"
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none"
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none"
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none"
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none"
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none"
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none"
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none"
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none"
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none"
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none"
+        }
+      },
+      "_highlightResult": {
+        "_meta": {
+          "name": {
+            "value": "blog-post-today",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "schema": {
+            "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/blogpost.json",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "snippet": {
+          "image": {
+            "image": {
+              "_meta": {
+                "schema": {
+                  "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              },
+              "id": {
+                "value": "08e53135-f3f5-4ee0-8f00-ff462888d070",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "name": {
+                "value": "woman-purple-dress",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "endpoint": {
+                "value": "devedition01",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "defaultHost": {
+                "value": "i1-qa.adis.ws",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "roundel": [
+              {
+                "_meta": {
+                  "schema": {
+                    "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/roundel.json",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundel": {
+                  "_meta": {
+                    "schema": {
+                      "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link",
+                      "matchLevel": "none",
+                      "matchedWords": []
+                    }
+                  },
+                  "id": {
+                    "value": "1f50bdce-8220-46c3-9f50-b5b6985e764a",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "name": {
+                    "value": "woman-tatoos",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "endpoint": {
+                    "value": "devedition01",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  },
+                  "defaultHost": {
+                    "value": "i1-qa.adis.ws",
+                    "matchLevel": "none",
+                    "matchedWords": []
+                  }
+                },
+                "roundelRatio": {
+                  "value": "0.3",
+                  "matchLevel": "none",
+                  "matchedWords": []
+                }
+              }
+            ],
+            "_meta": {
+              "schema": {
+                "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            }
+          },
+          "title": {
+            "value": "Blog Post",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "_meta": {
+            "schema": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        },
+        "content": [
+          {
+            "_meta": {
+              "name": {
+                "value": "blog banner",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "5a9f8c28-32bf-4b0e-8f39-8253c5b31049",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/banner.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          },
+          {
+            "_meta": {
+              "name": {
+                "value": "blog content",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              "schema": {
+                "value": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            },
+            "id": {
+              "value": "dff6238e-caf9-4822-baef-ae331e36fd52",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            "contentType": {
+              "value": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/text.json",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          }
+        ],
+        "title": {
+          "value": "Blog Post",
+          "matchLevel": "none",
+          "matchedWords": []
+        },
+        "publishedDate": {
+          "value": "2019-07-24T08:21:31.323Z",
+          "matchLevel": "none",
+          "matchedWords": []
+        }
+      },
+      "_rankingInfo": {
+        "nbTypos": 0,
+        "firstMatchedWord": 0,
+        "proximityDistance": 0,
+        "userScore": 0,
+        "geoDistance": 0,
+        "geoPrecision": 0,
+        "nbExactWords": 0,
+        "words": 0,
+        "filters": 0
+      }
     }
   ],
-  "nbHits": 3,
+  "nbHits": 10,
   "page": 1,
-  "nbPages": 3,
-  "hitsPerPage": 1,
+  "nbPages": 2,
+  "hitsPerPage": 10,
   "processingTimeMS": 1,
   "facets": {},
   "exhaustiveFacetsCount": true,

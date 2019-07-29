@@ -9,29 +9,34 @@ const mockSearchFn = jest.fn();
 
 jest.mock(
   '@/services/algolia/search-client',
-  () =>
-    function() {
+  (): Function =>
+    function(): { [key: string]: {} | Function } {
       return {
         client: {
-          search: () => mockSearchFn.apply(null, arguments)
+          search: (): Promise<MultiResponse<Response>> => mockSearchFn.apply(null, arguments)
         }
       };
     }
 );
 
-describe('Search', () => {
+describe('Search', (): void => {
+  beforeAll(
+    (): void => {
+      mockSearchFn.mockImplementation(
+        async (): Promise<MultiResponse<Response>> => {
+          return { results: [searchResponse] };
+        }
+      );
+    }
+  );
+
   afterAll(
     (): void => {
       jest.restoreAllMocks();
     }
   );
 
-  test('is a search result', async () => {
-    mockSearchFn.mockImplementationOnce(
-      async (): Promise<MultiResponse<Response>> => {
-        return { results: [searchResponse] };
-      }
-    );
+  test('is a search result', async (): Promise<void> => {
     const wrapper = mount(Search);
     await flushPromises();
     expect(mockSearchFn).toBeCalled();
@@ -40,20 +45,21 @@ describe('Search', () => {
     wrapper.destroy();
   });
 
-  xtest('is a search result with pagination', async () => {
-    mockSearchFn.mockImplementationOnce(
+  test('is a search result with pagination', async (): Promise<void> => {
+    mockSearchFn.mockImplementation(
       async (): Promise<MultiResponse<Response>> => {
         return { results: [searchResponseMutli] };
       }
     );
+
     const wrapper = mount(Search);
     await flushPromises();
-    const secondPage = wrapper.findAll('.ais-Pagination-link').at(1);
-    secondPage.trigger('click');
-    expect(mockSearchFn).toBeCalled();
+    const nextLink = wrapper.findAll('.ais-Pagination-item--nextPage').at(0);
+    nextLink.trigger('click');
+    await flushPromises();
+    expect(mockSearchFn).toHaveBeenCalledTimes(3);
     expect(wrapper.isVueInstance()).toBeTruthy();
     expect(wrapper.element).toMatchSnapshot();
     wrapper.destroy();
   });
-
 });
