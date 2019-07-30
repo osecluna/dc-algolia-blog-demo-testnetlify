@@ -20,7 +20,7 @@ jest.mock(
 );
 
 describe('Search', (): void => {
-  beforeAll(
+  beforeEach(
     (): void => {
       mockSearchFn.mockImplementation(
         async (): Promise<MultiResponse<Response>> => {
