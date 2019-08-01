@@ -1,16 +1,23 @@
 <template>
   <el-container>
     <el-header height="300px">
-      <div>
-        <h1>Dynamic Content Algolia Blog</h1>
-        <h5>Demonstraing how to integrate Amplience Dynamic Content with Algolia to create a simple blog</h5>
-      </div>
+      <blog-header />
     </el-header>
     <el-main>
       <nuxt />
     </el-main>
   </el-container>
 </template>
+
+<script>
+import BlogHeader from '@/components/blog-header/blog-header.vue';
+
+export default {
+  components: {
+    BlogHeader
+  }
+};
+</script>
 
 <style>
 h1 {

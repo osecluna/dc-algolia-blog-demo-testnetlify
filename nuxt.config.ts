@@ -1,5 +1,5 @@
-import pkg from './package.json';
 import dotenv from 'dotenv';
+import pkg from './package.json';
 
 dotenv.config();
 
@@ -37,13 +37,14 @@ export default {
     'element-ui/lib/theme-chalk/main.css',
     'element-ui/lib/theme-chalk/pagination.css',
     'element-ui/lib/theme-chalk/container.css',
-    'element-ui/lib/theme-chalk/header.css'
+    'element-ui/lib/theme-chalk/header.css',
+    'instantsearch.css/themes/algolia.css'
   ],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/element-ui', '@/plugins/filters'],
+  plugins: ['@/plugins/element-ui', '@/plugins/filters', '@/plugins/algolia-instantsearch'],
 
   /*
    ** Nuxt.js modules
@@ -63,6 +64,7 @@ export default {
    ** Build configuration
    */
   build: {
+    transpile: ['vue-instantsearch', 'instantsearch.js/es'],
     /*
      ** You can extend webpack config here
      */

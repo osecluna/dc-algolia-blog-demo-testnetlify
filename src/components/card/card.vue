@@ -5,7 +5,7 @@
         <img class="image" :src="image" :alt="title" />
         <div class="content">
           <h2>{{ title }}</h2>
-          <time class="date-time" :datetime="timestamp">{{ timestamp | blogDate }}</time>
+          <time class="date-time" datetime="datetime-local">{{ displayDate(timestamp) }}</time>
         </div>
       </nuxt-link>
     </div>
@@ -17,11 +17,29 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
 class Card extends Vue {
-  @Prop() title;
-  @Prop() description;
-  @Prop() link;
-  @Prop() timestamp;
-  @Prop() image;
+  @Prop()
+  title;
+  @Prop()
+  description;
+  @Prop()
+  link;
+  @Prop()
+  timestamp;
+  @Prop()
+  image;
+
+  private addLeadingZeroes(val: number): string | number {
+    return val < 10 ? `0${val}` : val;
+  }
+
+  public displayDate(ts: string): string {
+    const d = new Date(ts);
+    return `${d.getFullYear()}-${this.addLeadingZeroes(d.getMonth() + 1)}-${this.addLeadingZeroes(
+      d.getDate()
+    )} ${this.addLeadingZeroes(d.getHours())}:${this.addLeadingZeroes(d.getMinutes())}:${this.addLeadingZeroes(
+      d.getSeconds()
+    )}`;
+  }
 }
 
 export default Card;
