@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header is a Card instance with card data 1`] = `
+<div>
+  <h1>
+    <a
+      href="/"
+    >
+      
+      Amplience Dynamic Content Algolia Blog
+    
+    </a>
+  </h1>
+   
+  <p>
+    
+    Demonstrating how to integrate Amplience Dynamic Content with Algolia to create a simple blog
+  
+  </p>
+</div>
+`;
