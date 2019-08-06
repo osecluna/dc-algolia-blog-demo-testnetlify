@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="header-heading">
+    <h1>
       <a href="/">
         Amplience Dynamic Content Algolia Blog
       </a>
-    </div>
-    <div class="header-subheading">
+    </h1>
+    <p>
       Demonstrating how to integrate Amplience Dynamic Content with Algolia to create a simple blog
-    </div>
+    </p>
   </div>
 </template>
 
@@ -21,17 +21,13 @@ export default BlogHeader;
 </script>
 
 <style>
-.el-header .header-heading {
-  margin-bottom: 5px;
-}
-
-.el-header .header-heading a {
+.el-header a {
   font-size: 1.4rem;
   font-weight: 500;
   color: #ffffff;
 }
 
-.el-header .header-subheading {
+.el-header {
   font-weight: 500;
   color: #ffffff;
 }

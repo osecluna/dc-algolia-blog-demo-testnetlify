@@ -31,6 +31,10 @@ export default {
   width: 100%;
 }
 
+.el-header p {
+  color: #ffffff;
+}
+
 .el-main {
   margin: auto;
   max-width: 800px;
@@ -38,4 +42,5 @@ export default {
   background-color: #ffffff;
   padding: 20px;
 }
+
 </style>

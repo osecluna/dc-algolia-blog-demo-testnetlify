@@ -28,7 +28,6 @@ export default {
    ** Global CSS
    */
   css: [
-    '@/assets/styles/default.scss',
     'element-ui/lib/theme-chalk/reset.css',
     'element-ui/lib/theme-chalk/base.css',
     'element-ui/lib/theme-chalk/card.css',
@@ -38,7 +37,8 @@ export default {
     'element-ui/lib/theme-chalk/pagination.css',
     'element-ui/lib/theme-chalk/container.css',
     'element-ui/lib/theme-chalk/header.css',
-    'instantsearch.css/themes/algolia.css'
+    'instantsearch.css/themes/algolia.css',
+    '@/assets/styles/default.scss'
   ],
 
   /*
