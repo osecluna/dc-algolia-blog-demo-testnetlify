@@ -20,7 +20,6 @@ export default {
 </script>
 
 <style>
-
 .el-header {
   align-items: center;
   background-color: #17202c;
