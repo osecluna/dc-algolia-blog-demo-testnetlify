@@ -8,6 +8,8 @@
 
 This is an example blog that demonstrates how you can integrate Algolia Search indexes populated from published content in Dynamic Content.
 
+A requirement for running this demo application is that some content must have been published from DC and indexed within Algolia - this must have been modelled using the [Blog Accelerator content type](https://github.com/amplience/dc-accelerators-content-types/blob/master/blogpost.json).
+
 ## Installation
 
 Checkout this repo and install the dependencies via npm:
@@ -34,14 +36,18 @@ Configuration values required to run the application should be saved in a .env f
 ALGOLIA_APP_ID=my-algolia-app-id
 ALGOLIA_API_KEY=my-algolia-api-key
 ALGOLIA_INDEX_NAME=my-algolia-blog-index
+BLOG_POST_RENDERING_TEMPLATE=acc-template-blogPost
+RENDERING_SERVICE_ACCOUNT_ID=my-rendering-svc-id
 ```
+
+The *ALGOLIA_API_KEY* in this instance is the search API key and not the one which has write functionality. 
 
 ### 2. Start the application
 
 To run this application locally, run the following (default port is 3000)
 
 ```
-npm run start
+npm run dev
 ```
 
 ## Built with
