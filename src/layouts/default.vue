@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header height="300px">
+    <el-header height="100px">
       <blog-header />
     </el-header>
     <el-main>
@@ -20,18 +20,10 @@ export default {
 </script>
 
 <style>
-h1 {
-  font-weight: bold;
-}
-
-h5 {
-  margin-top: 2px;
-  color: #909090;
-}
 
 .el-header {
   align-items: center;
-  background-color: #ffffff;
+  background-color: #17202c;
   display: flex;
   height: 400px;
   justify-content: center;
@@ -44,5 +36,7 @@ h5 {
   margin: auto;
   max-width: 800px;
   height: 100%;
+  background-color: #ffffff;
+  padding: 20px;
 }
 </style>

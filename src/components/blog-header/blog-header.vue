@@ -1,7 +1,11 @@
 <template>
   <div>
-    <h1>Dynamic Content Algolia Blog</h1>
-    <h5>Demonstraing how to integrate Amplience Dynamic Content with Algolia to create a simple blog</h5>
+    <div class="header-heading">
+      <a href="/">
+        Amplience Dynamic Content Algolia Blog
+      </a>
+    </div>
+    <div class="header-subheading">Demonstrating how to integrate Amplience Dynamic Content with Algolia to create a simple blog</div>
   </div>
 </template>
 
@@ -13,3 +17,22 @@ class BlogHeader extends Vue {}
 
 export default BlogHeader;
 </script>
+
+<style>
+
+.el-header .header-heading {
+  margin-bottom: 5px;
+}
+
+.el-header .header-heading a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.el-header .header-subheading {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+</style>
