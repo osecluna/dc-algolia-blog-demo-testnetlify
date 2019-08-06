@@ -33,7 +33,7 @@ Configuration values required to run the application should be saved in a .env f
 ```
 ALGOLIA_APP_ID=my-algolia-app-id
 ALGOLIA_API_KEY=my-algolia-api-key
-ALGOLIA_BLOG_INDEX=my-algolia-blog-index
+ALGOLIA_INDEX_NAME=my-algolia-blog-index
 ```
 
 ### 2. Start the application
