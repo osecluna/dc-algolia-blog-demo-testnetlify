@@ -31,7 +31,7 @@ import RawSearchResult from '@/components/search/interfaces/raw-search-result.in
 import SearchResult from '@/components/search/interfaces/search-result.interface';
 import SearchResultImagesService from '@/components/search/services/search-result-images.service';
 
-const indexName = process.env.ALGOLIA_BLOG_INDEX || '';
+const indexName = process.env.ALGOLIA_INDEX_NAME || '';
 
 const { rootMixin } = createInstantSearch({
   searchClient: new SearchClient().client,

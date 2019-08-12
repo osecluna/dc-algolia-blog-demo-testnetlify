@@ -1,7 +1,13 @@
 <template>
   <div>
-    <h1>Dynamic Content Algolia Blog</h1>
-    <h5>Demonstraing how to integrate Amplience Dynamic Content with Algolia to create a simple blog</h5>
+    <h1>
+      <a href="/">
+        Amplience Dynamic Content Algolia Blog
+      </a>
+    </h1>
+    <p>
+      Demonstrating how to integrate Amplience Dynamic Content with Algolia to create a simple blog
+    </p>
   </div>
 </template>
 
@@ -13,3 +19,16 @@ class BlogHeader extends Vue {}
 
 export default BlogHeader;
 </script>
+
+<style>
+.el-header a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.el-header {
+  font-weight: 500;
+  color: #ffffff;
+}
+</style>

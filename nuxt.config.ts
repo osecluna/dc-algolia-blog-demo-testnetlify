@@ -28,7 +28,6 @@ export default {
    ** Global CSS
    */
   css: [
-    '@/assets/styles/default.scss',
     'element-ui/lib/theme-chalk/reset.css',
     'element-ui/lib/theme-chalk/base.css',
     'element-ui/lib/theme-chalk/card.css',
@@ -38,7 +37,8 @@ export default {
     'element-ui/lib/theme-chalk/pagination.css',
     'element-ui/lib/theme-chalk/container.css',
     'element-ui/lib/theme-chalk/header.css',
-    'instantsearch.css/themes/algolia.css'
+    'instantsearch.css/themes/algolia.css',
+    '@/assets/styles/default.scss'
   ],
 
   /*
@@ -86,7 +86,7 @@ export default {
   env: {
     ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
     ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
-    ALGOLIA_BLOG_INDEX: process.env.ALGOLIA_BLOG_INDEX,
+    ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
     BLOG_POST_RENDERING_TEMPLATE: process.env.BLOG_POST_RENDERING_TEMPLATE,
     RENDERING_SERVICE_ACCOUNT_ID: process.env.RENDERING_SERVICE_ACCOUNT_ID,
     RENDERING_SERVICE_STAGING_DOMAIN: process.env.RENDERING_SERVICE_STAGING_DOMAIN,

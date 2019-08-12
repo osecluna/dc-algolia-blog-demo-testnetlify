@@ -56,11 +56,10 @@ export default class BlogPost extends Vue {
 }
 
 .amp-dc-blog-title {
-  font-weight: bold;
-  font-size: 30px;
-  color: #606266;
-  text-align: center;
+  font-weight: 500;
+  font-size: 1.6rem;
   margin-bottom: 10px;
+  color: #1a1a1a;
 }
 
 .amp-dc-banner {
@@ -76,25 +75,20 @@ export default class BlogPost extends Vue {
 }
 
 .amp-dc-banner-info .amp-dc-banner-header {
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 20px;
   margin-bottom: 5px;
 }
 
 .amp-dc-banner-info .amp-dc-banner-subheader {
-  font-weight: bold;
+  font-weight: 500;
   font-size: 15px;
   margin-bottom: 2px;
 }
 
 .amp-dc-banner-info .amp-dc-banner-description {
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 12px;
-}
-
-.amp-dc-text {
-  padding: 10px 20px;
-  background-color: #fff;
 }
 
 .amp-dc-text h3,
