@@ -62,4 +62,14 @@ describe('Search', (): void => {
     expect(wrapper.element).toMatchSnapshot();
     wrapper.destroy();
   });
+
+  test('is passed the default configured number of search results', async (): Promise<void> => {
+    const wrapper = mount(Search);
+    await flushPromises();
+    expect(mockSearchFn).toBeCalled();
+    expect(wrapper.isVueInstance()).toBeTruthy();
+    expect(wrapper.element).toMatchSnapshot();
+    expect(wrapper.vm.$data.numberOfSearchResults).toEqual(9);
+    wrapper.destroy();
+  });
 });

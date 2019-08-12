@@ -1,5 +1,6 @@
 <template>
   <ais-instant-search-ssr>
+    <ais-configure :hitsPerPage="numberOfSearchResults" />
     <ais-search-box :class-names="{ 'ais-SearchBox': 'search' }" />
     <template>
       <ais-hits :transform-items="transformItems">
@@ -32,6 +33,8 @@ import SearchResult from '@/components/search/interfaces/search-result.interface
 import SearchResultImagesService from '@/components/search/services/search-result-images.service';
 
 const indexName = process.env.ALGOLIA_INDEX_NAME || '';
+const numberOfSearchResults =
+  (process.env.NUMBER_OF_SEARCH_RESULTS && parseInt(process.env.NUMBER_OF_SEARCH_RESULTS)) || 9;
 
 const { rootMixin } = createInstantSearch({
   searchClient: new SearchClient().client,
@@ -46,6 +49,9 @@ const { rootMixin } = createInstantSearch({
     AisPagination,
     Card
   },
+  data: () => ({
+    numberOfSearchResults
+  }),
   mixins: [rootMixin],
   methods: {
     transformItems: (items: RawSearchResult[]): SearchResult[] => {
