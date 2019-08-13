@@ -20,24 +20,27 @@ jest.mock(
 );
 
 describe('Search', (): void => {
-  beforeEach(
-    (): void => {
-      mockSearchFn.mockImplementation(
-        async (): Promise<MultiResponse<Response>> => {
-          return { results: [searchResponse] };
-        }
-      );
-    }
-  );
-
-  afterAll(
+  afterEach(
     (): void => {
       jest.restoreAllMocks();
     }
   );
 
+  afterAll(
+    (): void => {
+      jest.resetModules();
+    }
+  );
+
   test('is a search result', async (): Promise<void> => {
+    mockSearchFn.mockImplementationOnce(
+      async (): Promise<MultiResponse<Response>> => {
+        return { results: [searchResponse] };
+      }
+    );
+
     const wrapper = mount(Search);
+
     await flushPromises();
     expect(mockSearchFn).toBeCalled();
     expect(wrapper.isVueInstance()).toBeTruthy();
@@ -53,13 +56,31 @@ describe('Search', (): void => {
     );
 
     const wrapper = mount(Search);
+    wrapper.setData({
+      numberOfSearchResults: 2
+    });
+
     await flushPromises();
-    const nextLink = wrapper.findAll('.ais-Pagination-item--nextPage').at(0);
+    const nextLink = wrapper.findAll('.ais-Pagination-item--nextPage .ais-Pagination-link').at(0);
     nextLink.trigger('click');
     await flushPromises();
-    expect(mockSearchFn).toHaveBeenCalledTimes(3);
+    const activePage = wrapper.findAll('.ais-Pagination-item--selected').at(0);
+    expect(activePage.text()).toEqual('2');
+    const disabledNextPage = wrapper.findAll('.ais-Pagination-item--nextPage').at(0);
+    expect(disabledNextPage.classes()[2]).toBe('ais-Pagination-item--disabled');
+    expect(mockSearchFn).toHaveBeenCalled();
     expect(wrapper.isVueInstance()).toBeTruthy();
     expect(wrapper.element).toMatchSnapshot();
+    wrapper.destroy();
+  });
+
+  test('is passed the default configured number of search results', async (): Promise<void> => {
+    const wrapper = mount(Search);
+    await flushPromises();
+    expect(mockSearchFn).toBeCalled();
+    expect(wrapper.isVueInstance()).toBeTruthy();
+    expect(wrapper.element).toMatchSnapshot();
+    expect(wrapper.vm.$data.numberOfSearchResults).toEqual(9);
     wrapper.destroy();
   });
 });

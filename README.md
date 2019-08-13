@@ -38,9 +38,12 @@ ALGOLIA_API_KEY=my-algolia-api-key
 ALGOLIA_INDEX_NAME=my-algolia-blog-index
 BLOG_POST_RENDERING_TEMPLATE=acc-template-blogPost
 RENDERING_SERVICE_ACCOUNT_ID=my-rendering-svc-id
+NUMBER_OF_SEARCH_RESULTS=9
 ```
 
 The *ALGOLIA_API_KEY* in this instance is the search API key and not the one which has write functionality. 
+
+The `NUMBER_OF_SEARCH_RESULTS` determines the number of blog posts displayed by the search on each page of results.  It will default to `9` if not specified.
 
 ### 2. Start the application
 
