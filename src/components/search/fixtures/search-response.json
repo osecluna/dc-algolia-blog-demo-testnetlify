@@ -37,7 +37,7 @@
             "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/image.json"
           }
         },
-        "title": "Blog Post",
+        "title": "Snippet Blog Post",
         "_meta": {
           "schema": "https://unpkg.com/dc-accelerators-content-rendering-service/dist/contentTypes/snippet.json"
         }
@@ -305,7 +305,7 @@
             }
           },
           "title": {
-            "value": "Blog Post",
+            "value": "Snippet Blog Post",
             "matchLevel": "none",
             "matchedWords": []
           },
