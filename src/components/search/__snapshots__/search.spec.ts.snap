@@ -105,9 +105,11 @@ exports[`Search is a search result 1`] = `
                   Snippet Blog Post
                 </h2>
                  
-                <h2>
+                <div
+                  class="description"
+                >
                   No description.
-                </h2>
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -286,9 +288,11 @@ exports[`Search is a search result with pagination 1`] = `
                   Blog Post
                 </h2>
                  
-                <h2>
+                <div
+                  class="description"
+                >
                   No description.
-                </h2>
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -318,9 +322,11 @@ exports[`Search is a search result with pagination 1`] = `
                   Blog Post
                 </h2>
                  
-                <h2>
+                <div
+                  class="description"
+                >
                   No description.
-                </h2>
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -511,9 +517,11 @@ exports[`Search is passed the default configured number of search results 1`] = 
                   Blog Post
                 </h2>
                  
-                <h2>
+                <div
+                  class="description"
+                >
                   No description.
-                </h2>
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -543,9 +551,11 @@ exports[`Search is passed the default configured number of search results 1`] = 
                   Blog Post
                 </h2>
                  
-                <h2>
+                <div
+                  class="description"
+                >
                   No description.
-                </h2>
+                </div>
               </div>
             </nuxt-link>
           </div>
