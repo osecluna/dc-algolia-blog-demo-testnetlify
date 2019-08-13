@@ -9,9 +9,8 @@
             <el-col v-for="item in items" :key="item.objectID" :span="8">
               <card
                 :title="item.title"
-                :description="item.text"
+                :description="item.description"
                 :link="`/blogs/${item.objectID}`"
-                :timestamp="item.publishedDate"
                 :image="item.image"
               />
             </el-col>
@@ -59,7 +58,8 @@ const { rootMixin } = createInstantSearch({
         (item: RawSearchResult): SearchResult => ({
           objectID: item.objectID,
           publishedDate: item.publishedDate,
-          title: item.title,
+          title: (item.snippet && item.snippet.title) || undefined,
+          description: (item.snippet && item.snippet.description) || undefined,
           image: SearchResultImagesService.getImage(item),
           roundel: SearchResultImagesService.getRoundel(item)
         })
