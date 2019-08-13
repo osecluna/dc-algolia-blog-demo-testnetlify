@@ -24,12 +24,9 @@ exports[`Card is a Card instance with card data 1`] = `
             test-title
           </h2>
            
-          <time
-            class="date-time"
-            datetime="datetime-local"
-          >
-            2011-11-18 14:54:39
-          </time>
+          <h2>
+            test-description
+          </h2>
         </div>
       </a>
     </div>
