@@ -2,10 +2,10 @@
   <el-card :body-style="{ padding: '0px' }" shadow="hover">
     <div>
       <nuxt-link :to="link">
-        <img class="image" :src="image" :alt="title || 'No image.'" />
+        <img class="image" :src="image" :alt="title" />
         <div class="content">
-          <h2>{{ title || 'No title.' }}</h2>
-          <h2>{{ description || 'No description.' }}</h2>
+          <h2>{{ title }}</h2>
+          <time class="date-time" datetime="datetime-local">{{ displayDate(timestamp) }}</time>
         </div>
       </nuxt-link>
     </div>

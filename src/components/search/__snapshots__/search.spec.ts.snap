@@ -105,9 +105,12 @@ exports[`Search is a search result 1`] = `
                   Blog Post
                 </h2>
                  
-                <h2>
-                  No description.
-                </h2>
+                <time
+                  class="date-time"
+                  datetime="datetime-local"
+                >
+                  2019-07-24 09:21:31
+                </time>
               </div>
             </nuxt-link>
           </div>
@@ -286,9 +289,12 @@ exports[`Search is a search result with pagination 1`] = `
                   Blog Post
                 </h2>
                  
-                <h2>
-                  No description.
-                </h2>
+                <time
+                  class="date-time"
+                  datetime="datetime-local"
+                >
+                  2019-07-24 09:21:31
+                </time>
               </div>
             </nuxt-link>
           </div>
@@ -318,9 +324,12 @@ exports[`Search is a search result with pagination 1`] = `
                   Blog Post
                 </h2>
                  
-                <h2>
-                  No description.
-                </h2>
+                <time
+                  class="date-time"
+                  datetime="datetime-local"
+                >
+                  2019-07-24 09:21:31
+                </time>
               </div>
             </nuxt-link>
           </div>
@@ -511,9 +520,12 @@ exports[`Search is passed the default configured number of search results 1`] = 
                   Blog Post
                 </h2>
                  
-                <h2>
-                  No description.
-                </h2>
+                <time
+                  class="date-time"
+                  datetime="datetime-local"
+                >
+                  2019-07-24 09:21:31
+                </time>
               </div>
             </nuxt-link>
           </div>
@@ -543,9 +555,12 @@ exports[`Search is passed the default configured number of search results 1`] = 
                   Blog Post
                 </h2>
                  
-                <h2>
-                  No description.
-                </h2>
+                <time
+                  class="date-time"
+                  datetime="datetime-local"
+                >
+                  2019-07-24 09:21:31
+                </time>
               </div>
             </nuxt-link>
           </div>
