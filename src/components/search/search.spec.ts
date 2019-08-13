@@ -20,9 +20,11 @@ jest.mock(
 );
 
 describe('Search', (): void => {
-  afterEach((): void => {
-    jest.restoreAllMocks();
-  });
+  afterEach(
+    (): void => {
+      jest.restoreAllMocks();
+    }
+  );
 
   afterAll(
     (): void => {
