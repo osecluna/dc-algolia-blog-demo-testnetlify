@@ -18,7 +18,7 @@
         </template>
       </ais-hits>
     </template>
-    <ais-pagination />
+    <ais-pagination hidden="state.nbHits < 1"/>
   </ais-instant-search-ssr>
 </template>
 
@@ -81,6 +81,7 @@ export default class Search extends Vue {}
 
 .search {
   padding: 10px;
+  min-width: 728px;
 }
 
 .el-col {
