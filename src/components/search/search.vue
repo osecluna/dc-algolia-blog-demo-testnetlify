@@ -15,10 +15,10 @@
               />
             </el-col>
           </el-row>
+          <ais-pagination v-show="items.length > 0"/>
         </template>
       </ais-hits>
     </template>
-    <ais-pagination />
   </ais-instant-search-ssr>
 </template>
 
@@ -58,8 +58,8 @@ const { rootMixin } = createInstantSearch({
         (item: RawSearchResult): SearchResult => ({
           objectID: item.objectID,
           publishedDate: item.publishedDate,
-          title: (item.snippet && item.snippet.title) ? item.snippet.title : undefined,
-          description: (item.snippet && item.snippet.description) ? item.snippet.description : undefined,
+          title: item.snippet && item.snippet.title ? item.snippet.title : undefined,
+          description: item.snippet && item.snippet.description ? item.snippet.description : undefined,
           image: SearchResultImagesService.getImage(item),
           roundel: SearchResultImagesService.getRoundel(item)
         })
@@ -81,6 +81,7 @@ export default class Search extends Vue {}
 
 .search {
   padding: 10px;
+  min-width: 728px;
 }
 
 .el-col {
