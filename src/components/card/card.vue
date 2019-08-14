@@ -2,10 +2,10 @@
   <el-card :body-style="{ padding: '0px' }" shadow="hover">
     <div>
       <nuxt-link :to="link">
-        <img class="image" :src="image" :alt="title" />
+        <img class="image" :src="image" :alt="title || 'No image.'" />
         <div class="content">
-          <h2>{{ title }}</h2>
-          <time class="date-time" datetime="datetime-local">{{ displayDate(timestamp) }}</time>
+          <h2>{{ title || 'No title.' }}</h2>
+          <div class="description">{{ description || 'No description.' }}</div>
         </div>
       </nuxt-link>
     </div>
@@ -46,7 +46,7 @@ export default Card;
 </script>
 
 <style lang="scss">
-$titleLineHeight: 22px;
+$titleLineHeight: 12px;
 $titleLinesToDisplay: 3;
 
 h2 {
@@ -67,7 +67,7 @@ h2 {
   overflow: hidden;
   width: 100%;
 }
-.date-time {
+.description {
   font-size: 13px;
   color: #999;
 }

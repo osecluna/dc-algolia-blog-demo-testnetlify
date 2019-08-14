@@ -10,5 +10,7 @@ export default interface RawSearchResult {
       image: SearchResultImage;
       roundel?: SearchResultRoundel[];
     };
+    title: string;
+    description: string;
   };
 }

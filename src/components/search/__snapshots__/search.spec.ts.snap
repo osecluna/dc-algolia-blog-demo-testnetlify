@@ -93,7 +93,7 @@ exports[`Search is a search result 1`] = `
               to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e4"
             >
               <img
-                alt="Blog Post"
+                alt="Snippet Blog Post"
                 class="image"
                 src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
               />
@@ -102,15 +102,14 @@ exports[`Search is a search result 1`] = `
                 class="content"
               >
                 <h2>
-                  Blog Post
+                  Snippet Blog Post
                 </h2>
                  
-                <time
-                  class="date-time"
-                  datetime="datetime-local"
+                <div
+                  class="description"
                 >
-                  2019-07-24 09:21:31
-                </time>
+                  No description.
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -289,12 +288,11 @@ exports[`Search is a search result with pagination 1`] = `
                   Blog Post
                 </h2>
                  
-                <time
-                  class="date-time"
-                  datetime="datetime-local"
+                <div
+                  class="description"
                 >
-                  2019-07-24 09:21:31
-                </time>
+                  No description.
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -324,12 +322,11 @@ exports[`Search is a search result with pagination 1`] = `
                   Blog Post
                 </h2>
                  
-                <time
-                  class="date-time"
-                  datetime="datetime-local"
+                <div
+                  class="description"
                 >
-                  2019-07-24 09:21:31
-                </time>
+                  No description.
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -520,12 +517,11 @@ exports[`Search is passed the default configured number of search results 1`] = 
                   Blog Post
                 </h2>
                  
-                <time
-                  class="date-time"
-                  datetime="datetime-local"
+                <div
+                  class="description"
                 >
-                  2019-07-24 09:21:31
-                </time>
+                  No description.
+                </div>
               </div>
             </nuxt-link>
           </div>
@@ -555,12 +551,11 @@ exports[`Search is passed the default configured number of search results 1`] = 
                   Blog Post
                 </h2>
                  
-                <time
-                  class="date-time"
-                  datetime="datetime-local"
+                <div
+                  class="description"
                 >
-                  2019-07-24 09:21:31
-                </time>
+                  No description.
+                </div>
               </div>
             </nuxt-link>
           </div>
