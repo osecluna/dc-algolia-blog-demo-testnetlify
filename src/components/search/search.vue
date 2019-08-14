@@ -15,10 +15,10 @@
               />
             </el-col>
           </el-row>
+          <ais-pagination v-show="items.length > 0"/>
         </template>
       </ais-hits>
     </template>
-    <ais-pagination hidden="state.nbHits < 1" />
   </ais-instant-search-ssr>
 </template>
 
