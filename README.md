@@ -8,7 +8,14 @@
 
 This is an example blog that demonstrates how you can integrate Algolia Search indexes populated from published content in Dynamic Content.
 
-A requirement for running this demo application is that some content must have been published from DC and indexed within Algolia - this must have been modelled using the [Blog Accelerator content type](https://github.com/amplience/dc-accelerators-content-types/blob/master/blogpost.json).
+## Prerequisites
+
+A requirement for running this demo application is that a blogpost content item must have been published from Dynamic Content and indexed within Algolia. The rendering templates must also have been added to your Content Hub. Following the steps below will get you to this starting point:
+
+- Register the blogpost content type in Dynamic Content: [Blog Post Content Type](https://github.com/amplience/dc-accelerators-content-rendering-service/blob/master/dist/contentTypes/blogpost.json) | [Docs](https://github.com/amplience/dc-accelerators-content-rendering-service/blob/master/docs/CONFIGURE-DYNAMIC-CONTENT.md#content-types).
+- Create an integration between Dynamic Content and Algolia: [dc-integrations-algolia](https://github.com/amplience/dc-integrations-algolia).
+- In Dynamic Content, create a content item using the previously registered blogpost content type. Once created, publish the content item. This will then add it to your Algolia index.
+- Add the rendering templates to your Content Hub: [HTML Templates](https://github.com/amplience/dc-accelerators-content-rendering-service/tree/master/dist/templates) | [Docs](https://github.com/amplience/dc-accelerators-content-rendering-service/blob/master/docs/CONFIGURE-DYNAMIC-CONTENT.md#content-rendering-templates)
 
 ## Installation
 
@@ -30,20 +37,42 @@ npm run test
 
 ### 1. Configure your environment
 
-Configuration values required to run the application should be saved in a .env file within the root of the project. Example is shown below:
+Configuration values required to run the application should be saved in a `.env` file within the root of the project. Example is shown below:
 
 ```
-ALGOLIA_APP_ID=my-algolia-app-id
-ALGOLIA_API_KEY=my-algolia-api-key
-ALGOLIA_INDEX_NAME=my-algolia-blog-index
-BLOG_POST_RENDERING_TEMPLATE=acc-template-blogPost
-RENDERING_SERVICE_ACCOUNT_ID=my-rendering-svc-id
-NUMBER_OF_SEARCH_RESULTS=9
+# Taken from the 'Api Keys' page on the Algolia
+ALGOLIA_APPLICATION_ID=<my-algolia-app-id>
+
+# Taken from the 'API Keys' page on the Algolia site. This needs to be the Search-Only API Key, not the Write or Admin key
+ALGOLIA_SEARCH_API_KEY=<my-algolia-api-key>
+
+# Taken from the 'Indices' page on the Algolia site
+ALGOLIA_INDEX_NAME=<my-algolia-blog-index>
+
+# The name of your rendering template uploaded to DAM (without the file extension)
+DC_BLOG_POST_RENDERING_TEMPLATE=<acc-template-blogPost>
+
+# Taken from your hub's publishing settings
+DC_RENDERING_SERVICE_ACCOUNT_ID=<my-rendering-svc-id>
+
 ```
 
-The *ALGOLIA_API_KEY* in this instance is the search API key and not the one which has write functionality. 
+### 1.1 Using a different Dynamic Content environment
 
-The `NUMBER_OF_SEARCH_RESULTS` determines the number of blog posts displayed by the search on each page of results.  It will default to `9` if not specified.
+You can override the Dynamic Content API and Amplience Auth URLs by defining these optional environment variables:
+
+```
+# Alternative rendering service base url
+DC_RENDERING_SERVICE_BASE_URL=<alternative-rendering-service-base-url>
+
+# Dynamic Content Virtual Staging Environment domain
+DC_RENDERING_SERVICE_STAGING_DOMAIN=<rendering-service-domain>
+
+# Number of search results to display on the landing page: default = 9
+NUMBER_OF_SEARCH_RESULTS=<no-of-results>
+```
+
+These optional variables should be removed completely if they are not required.
 
 ### 2. Start the application
 
@@ -51,6 +80,12 @@ To run this application locally, run the following (default port is 3000)
 
 ```
 npm run dev
+```
+
+To run the application on a different port
+
+```
+npm run dev -- --port 8080
 ```
 
 ## Built with
