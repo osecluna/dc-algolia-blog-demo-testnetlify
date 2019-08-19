@@ -1,11 +1,22 @@
-import { mount } from '@vue/test-utils';
+import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils';
 import Search from './search.vue';
 import searchResponse from './fixtures/search-response.json';
 import searchResponseMutli from './fixtures/search-response-multiple-pages.json';
 import flushPromises from 'flush-promises';
 import { MultiResponse, Response } from '~/node_modules/@types/algoliasearch';
+import { Card, Col, Container, Header, Main, Pagination, Row } from '~/node_modules/element-ui';
+import VueInstantSearch from 'vue-instantsearch';
 
+let multiFixture;
 const mockSearchFn = jest.fn();
+const localVue = createLocalVue();
+
+const mountOptions = {
+  localVue,
+  stubs: {
+    NuxtLink: RouterLinkStub
+  }
+};
 
 jest.mock(
   '@/services/algolia/search-client',
@@ -20,9 +31,23 @@ jest.mock(
 );
 
 describe('Search', (): void => {
+  beforeAll(
+    (): void => {
+      localVue.use(Card);
+      localVue.use(Row);
+      localVue.use(Col);
+      localVue.use(Container);
+      localVue.use(Header);
+      localVue.use(Main);
+      localVue.use(Pagination);
+      localVue.use(VueInstantSearch);
+    }
+  );
+
   afterEach(
     (): void => {
       jest.restoreAllMocks();
+      multiFixture = searchResponseMutli;
     }
   );
 
@@ -33,13 +58,16 @@ describe('Search', (): void => {
   );
 
   test('is a search result', async (): Promise<void> => {
-    mockSearchFn.mockImplementationOnce(
+    mockSearchFn.mockImplementation(
       async (): Promise<MultiResponse<Response>> => {
         return { results: [searchResponse] };
       }
     );
 
-    const wrapper = mount(Search);
+    const wrapper = mount(Search, mountOptions);
+    wrapper.setData({
+      numberOfSearchResults: 1
+    });
 
     await flushPromises();
     expect(mockSearchFn).toBeCalled();
@@ -51,11 +79,11 @@ describe('Search', (): void => {
   test('is a search result with pagination', async (): Promise<void> => {
     mockSearchFn.mockImplementation(
       async (): Promise<MultiResponse<Response>> => {
-        return { results: [searchResponseMutli] };
+        return { results: [multiFixture] };
       }
     );
 
-    const wrapper = mount(Search);
+    const wrapper = mount(Search, mountOptions);
     wrapper.setData({
       numberOfSearchResults: 2
     });
@@ -75,7 +103,13 @@ describe('Search', (): void => {
   });
 
   test('is passed the default configured number of search results', async (): Promise<void> => {
-    const wrapper = mount(Search);
+    mockSearchFn.mockImplementation(
+      async (): Promise<MultiResponse<Response>> => {
+        return { results: [multiFixture] };
+      }
+    );
+
+    const wrapper = mount(Search, mountOptions);
     await flushPromises();
     expect(mockSearchFn).toBeCalled();
     expect(wrapper.isVueInstance()).toBeTruthy();
