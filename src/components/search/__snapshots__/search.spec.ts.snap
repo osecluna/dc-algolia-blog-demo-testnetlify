@@ -5,7 +5,7 @@ exports[`Search is a search result 1`] = `
   class="ais-InstantSearch ais-InstantSearch--ssr"
 >
   <ais-configure
-    hitsperpage="9"
+    hitsperpage="1"
   />
    
   <div
@@ -116,70 +116,69 @@ exports[`Search is a search result 1`] = `
         </el-card>
       </el-col>
     </el-row>
-  </div>
-   
-  <div
-    class="ais-Pagination"
-    hidden="hidden"
-  >
-    <ul
-      class="ais-Pagination-list"
+     
+    <div
+      class="ais-Pagination"
     >
-      <li
-        class="ais-Pagination-item ais-Pagination-item--firstPage ais-Pagination-item--disabled"
+      <ul
+        class="ais-Pagination-list"
       >
-        <span
-          aria-label="First"
-          class="ais-Pagination-link"
+        <li
+          class="ais-Pagination-item ais-Pagination-item--firstPage ais-Pagination-item--disabled"
         >
-          ‹‹
-        </span>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--previousPage ais-Pagination-item--disabled"
-      >
-        <span
-          aria-label="Previous"
-          class="ais-Pagination-link"
+          <span
+            aria-label="First"
+            class="ais-Pagination-link"
+          >
+            ‹‹
+          </span>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--previousPage ais-Pagination-item--disabled"
         >
-          ‹
-        </span>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--selected"
-      >
-        <a
-          class="ais-Pagination-link"
-          href="#"
+          <span
+            aria-label="Previous"
+            class="ais-Pagination-link"
+          >
+            ‹
+          </span>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--selected"
         >
-          1
-        </a>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--nextPage ais-Pagination-item--disabled"
-      >
-        <span
-          aria-label="Next"
-          class="ais-Pagination-link"
+          <a
+            class="ais-Pagination-link"
+            href="#"
+          >
+            1
+          </a>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--nextPage ais-Pagination-item--disabled"
         >
-          ›
-        </span>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--lastPage ais-Pagination-item--disabled"
-      >
-        <span
-          aria-label="Last"
-          class="ais-Pagination-link"
+          <span
+            aria-label="Next"
+            class="ais-Pagination-link"
+          >
+            ›
+          </span>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--lastPage ais-Pagination-item--disabled"
         >
-          ››
-        </span>
-      </li>
-    </ul>
+          <span
+            aria-label="Last"
+            class="ais-Pagination-link"
+          >
+            ››
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;
@@ -308,7 +307,7 @@ exports[`Search is a search result with pagination 1`] = `
         >
           <div>
             <nuxt-link
-              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e4"
+              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e5"
             >
               <img
                 alt="Blog Post"
@@ -334,82 +333,81 @@ exports[`Search is a search result with pagination 1`] = `
         </el-card>
       </el-col>
     </el-row>
-  </div>
-   
-  <div
-    class="ais-Pagination"
-    hidden="hidden"
-  >
-    <ul
-      class="ais-Pagination-list"
+     
+    <div
+      class="ais-Pagination"
     >
-      <li
-        class="ais-Pagination-item ais-Pagination-item--firstPage"
+      <ul
+        class="ais-Pagination-list"
       >
-        <a
-          aria-label="First"
-          class="ais-Pagination-link"
-          href="#"
+        <li
+          class="ais-Pagination-item ais-Pagination-item--firstPage"
         >
-          ‹‹
-        </a>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--previousPage"
-      >
-        <a
-          aria-label="Previous"
-          class="ais-Pagination-link"
-          href="#"
+          <a
+            aria-label="First"
+            class="ais-Pagination-link"
+            href="#"
+          >
+            ‹‹
+          </a>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--previousPage"
         >
-          ‹
-        </a>
-      </li>
-       
-      <li
-        class="ais-Pagination-item"
-      >
-        <a
-          class="ais-Pagination-link"
-          href="#"
+          <a
+            aria-label="Previous"
+            class="ais-Pagination-link"
+            href="#"
+          >
+            ‹
+          </a>
+        </li>
+         
+        <li
+          class="ais-Pagination-item"
         >
-          1
-        </a>
-      </li>
-      <li
-        class="ais-Pagination-item ais-Pagination-item--selected"
-      >
-        <a
-          class="ais-Pagination-link"
-          href="#"
+          <a
+            class="ais-Pagination-link"
+            href="#"
+          >
+            1
+          </a>
+        </li>
+        <li
+          class="ais-Pagination-item ais-Pagination-item--selected"
         >
-          2
-        </a>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--nextPage ais-Pagination-item--disabled"
-      >
-        <span
-          aria-label="Next"
-          class="ais-Pagination-link"
+          <a
+            class="ais-Pagination-link"
+            href="#"
+          >
+            2
+          </a>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--nextPage ais-Pagination-item--disabled"
         >
-          ›
-        </span>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--lastPage ais-Pagination-item--disabled"
-      >
-        <span
-          aria-label="Last"
-          class="ais-Pagination-link"
+          <span
+            aria-label="Next"
+            class="ais-Pagination-link"
+          >
+            ›
+          </span>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--lastPage ais-Pagination-item--disabled"
         >
-          ››
-        </span>
-      </li>
-    </ul>
+          <span
+            aria-label="Last"
+            class="ais-Pagination-link"
+          >
+            ››
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;
@@ -538,7 +536,7 @@ exports[`Search is passed the default configured number of search results 1`] = 
         >
           <div>
             <nuxt-link
-              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e4"
+              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e5"
             >
               <img
                 alt="Blog Post"
@@ -564,82 +562,81 @@ exports[`Search is passed the default configured number of search results 1`] = 
         </el-card>
       </el-col>
     </el-row>
-  </div>
-   
-  <div
-    class="ais-Pagination"
-    hidden="hidden"
-  >
-    <ul
-      class="ais-Pagination-list"
+     
+    <div
+      class="ais-Pagination"
     >
-      <li
-        class="ais-Pagination-item ais-Pagination-item--firstPage"
+      <ul
+        class="ais-Pagination-list"
       >
-        <a
-          aria-label="First"
-          class="ais-Pagination-link"
-          href="#"
+        <li
+          class="ais-Pagination-item ais-Pagination-item--firstPage"
         >
-          ‹‹
-        </a>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--previousPage"
-      >
-        <a
-          aria-label="Previous"
-          class="ais-Pagination-link"
-          href="#"
+          <a
+            aria-label="First"
+            class="ais-Pagination-link"
+            href="#"
+          >
+            ‹‹
+          </a>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--previousPage"
         >
-          ‹
-        </a>
-      </li>
-       
-      <li
-        class="ais-Pagination-item"
-      >
-        <a
-          class="ais-Pagination-link"
-          href="#"
+          <a
+            aria-label="Previous"
+            class="ais-Pagination-link"
+            href="#"
+          >
+            ‹
+          </a>
+        </li>
+         
+        <li
+          class="ais-Pagination-item"
         >
-          1
-        </a>
-      </li>
-      <li
-        class="ais-Pagination-item ais-Pagination-item--selected"
-      >
-        <a
-          class="ais-Pagination-link"
-          href="#"
+          <a
+            class="ais-Pagination-link"
+            href="#"
+          >
+            1
+          </a>
+        </li>
+        <li
+          class="ais-Pagination-item ais-Pagination-item--selected"
         >
-          2
-        </a>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--nextPage ais-Pagination-item--disabled"
-      >
-        <span
-          aria-label="Next"
-          class="ais-Pagination-link"
+          <a
+            class="ais-Pagination-link"
+            href="#"
+          >
+            2
+          </a>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--nextPage ais-Pagination-item--disabled"
         >
-          ›
-        </span>
-      </li>
-       
-      <li
-        class="ais-Pagination-item ais-Pagination-item--lastPage ais-Pagination-item--disabled"
-      >
-        <span
-          aria-label="Last"
-          class="ais-Pagination-link"
+          <span
+            aria-label="Next"
+            class="ais-Pagination-link"
+          >
+            ›
+          </span>
+        </li>
+         
+        <li
+          class="ais-Pagination-item ais-Pagination-item--lastPage ais-Pagination-item--disabled"
         >
-          ››
-        </span>
-      </li>
-    </ul>
+          <span
+            aria-label="Last"
+            class="ais-Pagination-link"
+          >
+            ››
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

@@ -5,6 +5,7 @@ import searchResponseMutli from './fixtures/search-response-multiple-pages.json'
 import flushPromises from 'flush-promises';
 import { MultiResponse, Response } from '~/node_modules/@types/algoliasearch';
 
+let multiFixture;
 const mockSearchFn = jest.fn();
 
 jest.mock(
@@ -23,6 +24,7 @@ describe('Search', (): void => {
   afterEach(
     (): void => {
       jest.restoreAllMocks();
+      multiFixture = searchResponseMutli;
     }
   );
 
@@ -33,13 +35,16 @@ describe('Search', (): void => {
   );
 
   test('is a search result', async (): Promise<void> => {
-    mockSearchFn.mockImplementationOnce(
+    mockSearchFn.mockImplementation(
       async (): Promise<MultiResponse<Response>> => {
         return { results: [searchResponse] };
       }
     );
 
     const wrapper = mount(Search);
+    wrapper.setData({
+      numberOfSearchResults: 1
+    });
 
     await flushPromises();
     expect(mockSearchFn).toBeCalled();
@@ -51,7 +56,7 @@ describe('Search', (): void => {
   test('is a search result with pagination', async (): Promise<void> => {
     mockSearchFn.mockImplementation(
       async (): Promise<MultiResponse<Response>> => {
-        return { results: [searchResponseMutli] };
+        return { results: [multiFixture] };
       }
     );
 
@@ -75,6 +80,12 @@ describe('Search', (): void => {
   });
 
   test('is passed the default configured number of search results', async (): Promise<void> => {
+    mockSearchFn.mockImplementation(
+      async (): Promise<MultiResponse<Response>> => {
+        return { results: [multiFixture] };
+      }
+    );
+
     const wrapper = mount(Search);
     await flushPromises();
     expect(mockSearchFn).toBeCalled();

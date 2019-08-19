@@ -15,7 +15,7 @@
               />
             </el-col>
           </el-row>
-          <ais-pagination v-show="items.length > 0"/>
+          <ais-pagination v-show="items.length > 0" />
         </template>
       </ais-hits>
     </template>
