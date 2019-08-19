@@ -4,9 +4,7 @@ exports[`Search is a search result 1`] = `
 <div
   class="ais-InstantSearch ais-InstantSearch--ssr"
 >
-  <ais-configure
-    hitsperpage="1"
-  />
+  <!---->
    
   <div
     class="ais-SearchBox search"
@@ -78,44 +76,49 @@ exports[`Search is a search result 1`] = `
   <div
     class="ais-Hits"
   >
-    <el-row
-      gutter="20"
+    <div
+      class="el-row"
+      style="margin-left: -10px; margin-right: -10px;"
     >
-      <el-col
-        span="8"
+      <div
+        class="el-col el-col-8"
+        style="padding-left: 10px; padding-right: 10px;"
       >
-        <el-card
-          body-style="[object Object]"
-          shadow="hover"
+        <div
+          class="el-card is-hover-shadow"
         >
-          <div>
-            <nuxt-link
-              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e4"
-            >
-              <img
-                alt="Snippet Blog Post"
-                class="image"
-                src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
-              />
-               
-              <div
-                class="content"
-              >
-                <h2>
-                  Snippet Blog Post
-                </h2>
+          <!---->
+          <div
+            class="el-card__body"
+            style="padding: 0px;"
+          >
+            <div>
+              <a>
+                <img
+                  alt="Snippet Blog Post"
+                  class="image"
+                  src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
+                />
                  
                 <div
-                  class="description"
+                  class="content"
                 >
-                  No description.
+                  <h2>
+                    Snippet Blog Post
+                  </h2>
+                   
+                  <div
+                    class="description"
+                  >
+                    No description.
+                  </div>
                 </div>
-              </div>
-            </nuxt-link>
+              </a>
+            </div>
           </div>
-        </el-card>
-      </el-col>
-    </el-row>
+        </div>
+      </div>
+    </div>
      
     <div
       class="ais-Pagination"
@@ -187,9 +190,7 @@ exports[`Search is a search result with pagination 1`] = `
 <div
   class="ais-InstantSearch ais-InstantSearch--ssr"
 >
-  <ais-configure
-    hitsperpage="2"
-  />
+  <!---->
    
   <div
     class="ais-SearchBox search"
@@ -261,78 +262,87 @@ exports[`Search is a search result with pagination 1`] = `
   <div
     class="ais-Hits"
   >
-    <el-row
-      gutter="20"
+    <div
+      class="el-row"
+      style="margin-left: -10px; margin-right: -10px;"
     >
-      <el-col
-        span="8"
+      <div
+        class="el-col el-col-8"
+        style="padding-left: 10px; padding-right: 10px;"
       >
-        <el-card
-          body-style="[object Object]"
-          shadow="hover"
+        <div
+          class="el-card is-hover-shadow"
         >
-          <div>
-            <nuxt-link
-              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e4"
-            >
-              <img
-                alt="Blog Post"
-                class="image"
-                src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
-              />
-               
-              <div
-                class="content"
-              >
-                <h2>
-                  Blog Post
-                </h2>
+          <!---->
+          <div
+            class="el-card__body"
+            style="padding: 0px;"
+          >
+            <div>
+              <a>
+                <img
+                  alt="Blog Post"
+                  class="image"
+                  src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
+                />
                  
                 <div
-                  class="description"
+                  class="content"
                 >
-                  No description.
+                  <h2>
+                    Blog Post
+                  </h2>
+                   
+                  <div
+                    class="description"
+                  >
+                    No description.
+                  </div>
                 </div>
-              </div>
-            </nuxt-link>
+              </a>
+            </div>
           </div>
-        </el-card>
-      </el-col>
-      <el-col
-        span="8"
+        </div>
+      </div>
+      <div
+        class="el-col el-col-8"
+        style="padding-left: 10px; padding-right: 10px;"
       >
-        <el-card
-          body-style="[object Object]"
-          shadow="hover"
+        <div
+          class="el-card is-hover-shadow"
         >
-          <div>
-            <nuxt-link
-              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e5"
-            >
-              <img
-                alt="Blog Post"
-                class="image"
-                src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
-              />
-               
-              <div
-                class="content"
-              >
-                <h2>
-                  Blog Post
-                </h2>
+          <!---->
+          <div
+            class="el-card__body"
+            style="padding: 0px;"
+          >
+            <div>
+              <a>
+                <img
+                  alt="Blog Post"
+                  class="image"
+                  src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
+                />
                  
                 <div
-                  class="description"
+                  class="content"
                 >
-                  No description.
+                  <h2>
+                    Blog Post
+                  </h2>
+                   
+                  <div
+                    class="description"
+                  >
+                    No description.
+                  </div>
                 </div>
-              </div>
-            </nuxt-link>
+              </a>
+            </div>
           </div>
-        </el-card>
-      </el-col>
-    </el-row>
+        </div>
+      </div>
+    </div>
      
     <div
       class="ais-Pagination"
@@ -416,9 +426,7 @@ exports[`Search is passed the default configured number of search results 1`] = 
 <div
   class="ais-InstantSearch ais-InstantSearch--ssr"
 >
-  <ais-configure
-    hitsperpage="9"
-  />
+  <!---->
    
   <div
     class="ais-SearchBox search"
@@ -490,78 +498,87 @@ exports[`Search is passed the default configured number of search results 1`] = 
   <div
     class="ais-Hits"
   >
-    <el-row
-      gutter="20"
+    <div
+      class="el-row"
+      style="margin-left: -10px; margin-right: -10px;"
     >
-      <el-col
-        span="8"
+      <div
+        class="el-col el-col-8"
+        style="padding-left: 10px; padding-right: 10px;"
       >
-        <el-card
-          body-style="[object Object]"
-          shadow="hover"
+        <div
+          class="el-card is-hover-shadow"
         >
-          <div>
-            <nuxt-link
-              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e4"
-            >
-              <img
-                alt="Blog Post"
-                class="image"
-                src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
-              />
-               
-              <div
-                class="content"
-              >
-                <h2>
-                  Blog Post
-                </h2>
+          <!---->
+          <div
+            class="el-card__body"
+            style="padding: 0px;"
+          >
+            <div>
+              <a>
+                <img
+                  alt="Blog Post"
+                  class="image"
+                  src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
+                />
                  
                 <div
-                  class="description"
+                  class="content"
                 >
-                  No description.
+                  <h2>
+                    Blog Post
+                  </h2>
+                   
+                  <div
+                    class="description"
+                  >
+                    No description.
+                  </div>
                 </div>
-              </div>
-            </nuxt-link>
+              </a>
+            </div>
           </div>
-        </el-card>
-      </el-col>
-      <el-col
-        span="8"
+        </div>
+      </div>
+      <div
+        class="el-col el-col-8"
+        style="padding-left: 10px; padding-right: 10px;"
       >
-        <el-card
-          body-style="[object Object]"
-          shadow="hover"
+        <div
+          class="el-card is-hover-shadow"
         >
-          <div>
-            <nuxt-link
-              to="/blogs/d79b4424-7fd4-4237-85e7-3df51c8716e5"
-            >
-              <img
-                alt="Blog Post"
-                class="image"
-                src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
-              />
-               
-              <div
-                class="content"
-              >
-                <h2>
-                  Blog Post
-                </h2>
+          <!---->
+          <div
+            class="el-card__body"
+            style="padding: 0px;"
+          >
+            <div>
+              <a>
+                <img
+                  alt="Blog Post"
+                  class="image"
+                  src="//i1-qa.adis.ws/i/devedition01/woman-purple-dress"
+                />
                  
                 <div
-                  class="description"
+                  class="content"
                 >
-                  No description.
+                  <h2>
+                    Blog Post
+                  </h2>
+                   
+                  <div
+                    class="description"
+                  >
+                    No description.
+                  </div>
                 </div>
-              </div>
-            </nuxt-link>
+              </a>
+            </div>
           </div>
-        </el-card>
-      </el-col>
-    </el-row>
+        </div>
+      </div>
+    </div>
      
     <div
       class="ais-Pagination"
