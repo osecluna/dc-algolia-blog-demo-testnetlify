@@ -5,13 +5,18 @@ import { shallowMount } from '~/node_modules/@vue/test-utils';
 
 const mockGetRenderedContentItem = jest.fn();
 
-jest.mock('@/services/dynamic-content-rendering/dynamic-content-rendering.service', () => {
-  return jest.fn(() => {
-    return {
-      getRenderedContentItem: mockGetRenderedContentItem
-    };
-  });
-});
+jest.mock(
+  '@/services/dynamic-content-rendering/dynamic-content-rendering.service',
+  (): Function => {
+    return jest.fn(
+      (): { getRenderedContentItem: Function } => {
+        return {
+          getRenderedContentItem: mockGetRenderedContentItem
+        };
+      }
+    );
+  }
+);
 
 describe('/blogs/_id', (): void => {
   afterAll(
@@ -20,7 +25,7 @@ describe('/blogs/_id', (): void => {
     }
   );
 
-  test('renders a page with the data from the renderedContentItem', async () => {
+  test('renders a page with the data from the renderedContentItem', async (): Promise<void> => {
     const wrapperHtml = '<h1>Blog Post</h1><p>Blog Blurb</p>';
     mockGetRenderedContentItem.mockResolvedValueOnce({ body: wrapperHtml });
 

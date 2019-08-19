@@ -12,7 +12,7 @@
     "commit": "npx git-cz",
     "test:jest": "jest",
     "test": "run-s lint test:jest",
-    "lint": "prettier \"**/*.ts\" \"**/*.json\" \"**/*.vue\" --write",
+    "lint": "prettier \"**/*.ts\" \"**/*.json\" \"**/*.vue\" --check && eslint \"**/*.ts\"",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"**/*.ts\" --write",
     "fix:eslint": "eslint --fix \"**/*.ts\""
@@ -77,7 +77,7 @@
     "vue-property-decorator": "^8.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.6.0",
+    "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^7.6.0",
     "@nuxt/typescript": "^2.7.1",
     "@nuxtjs/eslint-config": "^0.0.1",
@@ -91,7 +91,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
-    "commitizen": "^3.1.1",
+    "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^2.1.0",
     "dotenv": "^8.0.0",
     "eslint": "^5.16.0",
