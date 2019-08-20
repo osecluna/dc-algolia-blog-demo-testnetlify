@@ -12,7 +12,7 @@ This is an example blog that demonstrates how you can integrate Algolia Search i
 
 A requirement for running this demo application is that a blogpost content item must have been published from Dynamic Content and indexed within Algolia. The rendering templates must also have been added to your Content Hub. Following the steps below will get you to this starting point:
 
-- Register the blogpost content type in Dynamic Content: [Blog Post Content Type](https://github.com/amplience/dc-accelerators-content-rendering-service/blob/master/dist/contentTypes/blogpost.json) | [Docs](https://github.com/amplience/dc-accelerators-content-rendering-service/blob/master/docs/CONFIGURE-DYNAMIC-CONTENT.md#content-types).
+- Register the required content types in Dynamic Content: [Content Types](https://github.com/amplience/dc-accelerators-content-rendering-service/tree/master/dist/contentTypes) | [Docs](https://github.com/amplience/dc-accelerators-content-rendering-service/blob/master/docs/CONFIGURE-DYNAMIC-CONTENT.md#content-types).
 - Create an integration between Dynamic Content and Algolia: [dc-integrations-algolia](https://github.com/amplience/dc-integrations-algolia).
 - In Dynamic Content, create a content item using the previously registered blogpost content type. Once created, publish the content item. This will then add it to your Algolia index.
 - Add the rendering templates to your Content Hub: [HTML Templates](https://github.com/amplience/dc-accelerators-content-rendering-service/tree/master/dist/templates) | [Docs](https://github.com/amplience/dc-accelerators-content-rendering-service/blob/master/docs/CONFIGURE-DYNAMIC-CONTENT.md#content-rendering-templates)
@@ -42,10 +42,10 @@ Configuration values required to run the application should be saved in a `.env`
 | Parameter                       | Example Value                    | Required | Where to find it                                                                                                                     |
 | ------------------------------- | -------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | ALGOLIA_APPLICATION_ID          | ABCDEF1234                       | true     | Taken from the 'API Keys' page on the Algolia site.                                                                                  |
-| ALGOLIA_SEARCH_API_KEY          | 0123456789abcdef0123456789abcdef | true     | Taken from the 'API Keys' page on the Algolia site. This needs to be the Write or Admin key, not the Search key.                     |
 | ALGOLIA_INDEX_NAME              | my-index-name                    | true     | You can use an existing Algolia index name, or you can use a new name here and it will be created automatically if it doesn't exist. |
+| ALGOLIA_SEARCH_API_KEY          | 0123456789abcdef0123456789abcdef | true     | Taken from the 'API Keys' page on the Algolia site. This needs to be the Write or Admin key, not the Search key.                     |
 | DC_BLOG_POST_RENDERING_TEMPLATE | acc-template-blogPost            | true     | The name of your rendering template uploaded to DAM (without the file extension)                                                     |
-| DC_RENDERING_SERVICE_ACCOUNT_ID | my-rendering-svc-id              | true     | Taken from your hub's publishing settings                                                                                            |
+| DC_RENDERING_SERVICE_ACCOUNT_ID | my-rendering-svc-id              | true     | The endpoint value taken from your hub's publishing settings                                                                                            |
 
 ### 1.1 Using a different Dynamic Content environment
 
@@ -53,9 +53,9 @@ You can override the Dynamic Content API and Amplience Auth URLs by defining the
 
 | Parameter                           | Example Value                          | Required | Where to find it                                                     |
 | ----------------------------------- | -------------------------------------- | -------- | -------------------------------------------------------------------- |
-| DC_RENDERING_SERVICE_BASE_URL       | alternative-rendering-service-base-url | true     | Alternative rendering service base url                               |
-| DC_RENDERING_SERVICE_STAGING_DOMAIN | rendering-service-domain               | true     | Dynamic Content Virtual Staging Environment domain                   |
-| NUMBER_OF_SEARCH_RESULTS            | 9                                      | true     | Number of search results to display on the landing page: default = 9 |
+| DC_RENDERING_SERVICE_BASE_URL       | alternative-rendering-service-base-url | false    | Alternative rendering service base url                               |
+| DC_RENDERING_SERVICE_STAGING_DOMAIN | rendering-service-domain               | false    | Dynamic Content Virtual Staging Environment domain                   |
+| NUMBER_OF_SEARCH_RESULTS            | 9                                      | false    | Number of search results to display on the landing page: default = 9 |
 
 These optional variables should be removed completely if they are not required.
 
