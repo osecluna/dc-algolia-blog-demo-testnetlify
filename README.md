@@ -39,13 +39,13 @@ npm run test
 
 Configuration values required to run the application should be saved in a `.env` file within the root of the project. Example is shown below:
 
-| Parameter                       | Example Value                    | Required | Where to find it                                                                                                                     |
-| ------------------------------- | -------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| ALGOLIA_APPLICATION_ID          | ABCDEF1234                       | true     | Taken from the 'API Keys' page on the Algolia site.                                                                                  |
-| ALGOLIA_INDEX_NAME              | my-index-name                    | true     | You can use an existing Algolia index name, or you can use a new name here and it will be created automatically if it doesn't exist. |
-| ALGOLIA_SEARCH_API_KEY          | 0123456789abcdef0123456789abcdef | true     | Taken from the 'API Keys' page on the Algolia site. This needs to be the Write or Admin key, not the Search key.                     |
-| DC_BLOG_POST_RENDERING_TEMPLATE | acc-template-blogPost            | true     | The name of your rendering template uploaded to DAM (without the file extension)                                                     |
-| DC_RENDERING_SERVICE_ACCOUNT_ID | my-rendering-svc-id              | true     | The endpoint value taken from your hub's publishing settings                                                                                            |
+| Parameter                       | Example Value                    | Required | Where to find it                                                                                                                                                                 |
+| ------------------------------- | -------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ALGOLIA_APPLICATION_ID          | ABCDEF1234                       | true     | Taken from the 'API Keys' page on the Algolia site.                                                                                                                              |
+| ALGOLIA_INDEX_NAME              | my-index-name                    | true     | You can use an existing Algolia index name, or you can use a new name here and it will be created automatically if it doesn't exist.                                             |
+| ALGOLIA_SEARCH_API_KEY          | 0123456789abcdef0123456789abcdef | true     | Taken from the 'API Keys' page on the Algolia site. This needs to be the Write or Admin key, not the Search key.                                                                 |
+| DC_BLOG_POST_RENDERING_TEMPLATE | acc-template-blogPost            | true     | The name of your rendering template uploaded to DAM (without the file extension)                                                                                                 |
+| DC_RENDERING_SERVICE_ACCOUNT_ID | my-rendering-svc-id              | true     | Replace this with your company tag. You can find this by looking at the dynamic URL of an asset published in [Content Hub](https://docs.amplience.net/glossary.html#content-hub) |
 
 ### 1.1 Using a different Dynamic Content environment
 
