@@ -4,8 +4,8 @@ export default class SearchClient {
   public client: Client;
 
   public constructor() {
-    const appId = process.env.ALGOLIA_APP_ID || '';
-    const apiKey = process.env.ALGOLIA_API_KEY || '';
+    const appId = process.env.ALGOLIA_APPLICATION_ID || '';
+    const apiKey = process.env.ALGOLIA_SEARCH_API_KEY || '';
     this.client = algoliasearch(appId, apiKey);
   }
 }

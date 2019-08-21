@@ -24,7 +24,7 @@ describe('DynamicContentRenderingService', () => {
 
   test('Loads a new client', (): void => {
     const opts = {
-      account: 'RENDERING_SERVICE_ACCOUNT_ID'
+      account: 'DC_RENDERING_SERVICE_ACCOUNT_ID'
     };
 
     new DynamicContentRenderingService(opts);
@@ -33,8 +33,8 @@ describe('DynamicContentRenderingService', () => {
 
   test('Loads a new client with a preview domain', (): void => {
     const opts = {
-      account: 'RENDERING_SERVICE_ACCOUNT_ID',
-      stagingEnvironment: 'RENDERING_SERVICE_STAGING_DOMAIN'
+      account: 'DC_RENDERING_SERVICE_ACCOUNT_ID',
+      stagingEnvironment: 'DC_RENDERING_SERVICE_STAGING_DOMAIN'
     };
 
     new DynamicContentRenderingService(opts);
@@ -43,8 +43,8 @@ describe('DynamicContentRenderingService', () => {
 
   test('Loads a new client with a baseUrl', (): void => {
     const opts = {
-      account: 'RENDERING_SERVICE_ACCOUNT_ID',
-      baseUrl: 'RENDERING_SERVICE_BASE_URL'
+      account: 'DC_RENDERING_SERVICE_ACCOUNT_ID',
+      baseUrl: 'DC_RENDERING_SERVICE_BASE_URL'
     };
 
     new DynamicContentRenderingService(opts);
@@ -53,7 +53,7 @@ describe('DynamicContentRenderingService', () => {
 
   test('Returns some HTML from the renderContentItem fn', async (): Promise<void> => {
     const opts = {
-      account: 'RENDERING_SERVICE_ACCOUNT_ID'
+      account: 'DC_RENDERING_SERVICE_BASE_URL'
     };
 
     const service = new DynamicContentRenderingService(opts);

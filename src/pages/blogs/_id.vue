@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable-next-line vue/no-v-html -->
   <div v-html="contentItem.body"></div>
 </template>
 
@@ -7,10 +8,10 @@ import { Vue, Component } from 'vue-property-decorator';
 import { ContentClientConfig, RenderedContentItem } from '~/node_modules/dc-delivery-sdk-js';
 import DynamicContentRenderingService from '@/services/dynamic-content-rendering/dynamic-content-rendering.service';
 
-const accountId: string = process.env.RENDERING_SERVICE_ACCOUNT_ID || '';
-const stagingVseDomain: string | undefined = process.env.RENDERING_SERVICE_STAGING_DOMAIN;
-const baseUrl: string | undefined = process.env.RENDERING_SERVICE_BASE_URL;
-const renderingTemplate: string = process.env.BLOG_POST_RENDERING_TEMPLATE || '';
+const accountId: string = process.env.DC_RENDERING_SERVICE_ACCOUNT_ID || '';
+const stagingVseDomain: string | undefined = process.env.DC_RENDERING_SERVICE_STAGING_DOMAIN;
+const baseUrl: string | undefined = process.env.DC_RENDERING_SERVICE_BASE_URL;
+const renderingTemplate: string = process.env.DC_BLOG_POST_RENDERING_TEMPLATE || '';
 
 @Component({})
 export default class BlogPost extends Vue {

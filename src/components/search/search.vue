@@ -1,5 +1,6 @@
 <template>
   <ais-instant-search-ssr>
+    <!-- eslint-disable-next-line vue/attribute-hyphenation -->
     <ais-configure :hitsPerPage="numberOfSearchResults" />
     <ais-search-box :class-names="{ 'ais-SearchBox': 'search' }" />
     <template>
