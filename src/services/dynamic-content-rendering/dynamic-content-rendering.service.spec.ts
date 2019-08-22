@@ -1,21 +1,28 @@
 import DynamicContentRenderingService from './dynamic-content-rendering.service';
 import { ContentClient } from '~/node_modules/dc-delivery-sdk-js';
 
-const mockRenderContentItem = jest.fn().mockImplementation(() => {
-  return { body: '<html></html>' };
-});
+const mockRenderContentItem = jest.fn().mockImplementation(
+  (): { body: string } => {
+    return { body: '<html></html>' };
+  }
+);
 
-jest.mock('dc-delivery-sdk-js', () => {
-  return {
-    ContentClient: jest.fn(() => {
-      return {
-        renderContentItem: mockRenderContentItem
-      };
-    })
-  };
-});
+jest.mock(
+  'dc-delivery-sdk-js',
+  (): { ContentClient: Function } => {
+    return {
+      ContentClient: jest.fn(
+        (): { renderContentItem: Function } => {
+          return {
+            renderContentItem: mockRenderContentItem
+          };
+        }
+      )
+    };
+  }
+);
 
-describe('DynamicContentRenderingService', () => {
+describe('DynamicContentRenderingService', (): void => {
   afterAll(
     (): void => {
       jest.clearAllMocks();
