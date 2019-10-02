@@ -12,7 +12,7 @@
     "commit": "npx git-cz",
     "test:jest": "jest",
     "test": "run-s lint test:jest",
-    "lint": "prettier \"**/*.ts\" \"**/*.json\" \"**/*.vue\" --check && eslint \"**/*.ts\"",
+    "lint": "prettier \"src/**/*.ts\" \"src/**/*.json\" \"src/**/*.vue\" --check && eslint \"src/**/*.ts\"",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"**/*.ts\" --write",
     "fix:eslint": "eslint --fix \"**/*.ts\""

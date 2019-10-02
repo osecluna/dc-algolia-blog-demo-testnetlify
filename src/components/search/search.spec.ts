@@ -1,11 +1,11 @@
 import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils';
+import flushPromises from 'flush-promises';
+import VueInstantSearch from 'vue-instantsearch';
 import Search from './search.vue';
 import searchResponse from './fixtures/search-response.json';
 import searchResponseMutli from './fixtures/search-response-multiple-pages.json';
-import flushPromises from 'flush-promises';
 import { MultiResponse, Response } from '~/node_modules/@types/algoliasearch';
 import { Card, Col, Container, Header, Main, Pagination, Row } from '~/node_modules/element-ui';
-import VueInstantSearch from 'vue-instantsearch';
 
 let multiFixture;
 const mockSearchFn = jest.fn();
